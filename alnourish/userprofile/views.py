@@ -70,5 +70,7 @@ def imagetest(request,name):
 
 @login_required(login_url='/account/login/')
 def result(request,name):
-    context = {'name': name}
+    username = request.user.username
+    culture = Culture.objects.filter(username=username,name=name)
+    context = {'culture':culture}
     return render(request, 'userprofile/result.html',context)
