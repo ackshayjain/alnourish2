@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static from staticfiles %}
 {% block home_active %}
 <li><a href="% url 'home:index' %}" class="active"><i class="lnr lnr-home"></i> <span>Home</span></a></li>
 {% endblock %}
@@ -16,35 +16,35 @@
 			<div class="row row-pb-md">
 				<div class="col-md-12">
 					<ul id="gtco-portfolio-list">
-						<li class="one-half animate-box" data-animate-effect="fadeIn" style="background-image: "{% static 'assets/img/tiles/1.jpg' %}"; ">
-							<a href="./Literary.html" class="color-1">
+						<li class="one-half animate-box" data-animate-effect="fadeIn" style="background-image: url({% static 'assets/img/tiles/1.jpg' %}); ">
+							<a href="{% url 'profile:index' %}" class="">
 								<div class="case-studies-summary">
-									<h2>BUY our kits</h2>
+									<h2></h2>
 								</div>
 							</a>
 						</li>
 
-						<li class="one-half animate-box" data-animate-effect="fadeIn">
-							<a href="./Literary.html" class="color-2">
+						<li class="one-half animate-box" data-animate-effect="fadeIn" style="background-image: url({% static 'assets/img/tiles/2.jpg' %}); ">
+							<a href="./Literary.html" class="">
 								<div class="case-studies-summary">
-									<h2>SELL your algae</h2>
+									<h2></h2>
 								</div>
 							</a>
 						</li>
 
-						<li class="one-half animate-box" data-animate-effect="fadeIn">
-							<a href="{% url 'profile:index' %}" class="color-5">
+						<li class="one-half animate-box" data-animate-effect="fadeIn" style="background-image: url({% static 'assets/img/tiles/3.jpg' %}); ">
+							<a href="{% url 'profile:index' %}" class="">
 								<div class="case-studies-summary">
-									<h2>TRACK your progress</h2>
+									<h2></h2>
 								</div>
 							</a>
 						</li>
 
-						<li class="one-half animate-box" data-animate-effect="fadeIn">
+						<li class="one-half animate-box" data-animate-effect="fadeIn" style="background-image: url({% static 'assets/img/tiles/4.jpg' %}); ">
 
-							<a href="./Literary.html" class="color-6">
+							<a href="./Literary.html" class="">
 								<div class="case-studies-summary">
-									<h2>Get Started with our kits</h2>
+									<h2></h2>
 								</div>
 							</a>
 						</li>
