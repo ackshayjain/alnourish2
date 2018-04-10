@@ -60,3 +60,7 @@ def delete_culture(request,name):
 @login_required(login_url='/account/login/')
 def testc(request):
     return render(request, 'userprofile/testculture.html')
+
+@login_required(login_url='/account/login/')
+def testc(request):
+    return render(request, 'userprofile/imagetest.html')
