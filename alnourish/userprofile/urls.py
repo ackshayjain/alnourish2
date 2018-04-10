@@ -8,6 +8,7 @@ urlpatterns = [
     url(r'^track/new/$',views.new_culture,name='new'),
     url(r'^track/test/$',views.testc,name='testc'),
     url(r'^track/test/imagetest/$',views.imagetest,name='imagetest'),
+url(r'^track/test/imagetest/result/$',views.result,name='result'),
     url(r'^track/delete/(?P<name>\w+)/$',views.delete_culture,name='delete'),
 
 ]
