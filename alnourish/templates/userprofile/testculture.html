@@ -185,7 +185,9 @@ a.float:hover + div.label-container{
 
       </div>
     </section><!-- #portfolio -->
-<a href="{% url 'profile:imagetest' culture.name %}" class="float">
+              {% if name %}
+<a href="{% url 'profile:imagetest' name %}" class="float">
+    {% endif %}
 <i class="fas fa-angle-right my-float"></i>
 </a>
 <div class="label-container">
