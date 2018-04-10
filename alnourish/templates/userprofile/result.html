@@ -56,7 +56,7 @@ a.float:hover + div.label-container{
 
 {% endblock %}
 
-{% block about_active %}
+{% block home_active %}
 <li><a href="% url 'home:about' %}" class="active"><i class="lnr lnr-home"></i> <span>About Us</span></a></li>
 {% endblock %}
 
@@ -86,8 +86,8 @@ a.float:hover + div.label-container{
       <div class="container">
 
         <div class="section-header">
-          <h2>{culture Name}</h2>
-            <p>By {username} | Volume {volume}</p>
+          <h2>{{culture.0.name}}</h2>
+            <p>By {{culture.0.username}} | Volume {{culture.0.volume}} Litres</p>
         </div>
 
         <div class="row">
@@ -95,7 +95,7 @@ a.float:hover + div.label-container{
           <div class="col-lg-6">
             <div class="box wow fadeInLeft">
               <div class="icon"><i class="fa fa-bar-chart"></i></div>
-              <h4 class="title"><a href="">{current pH}/a></h4>
+              <h4 class="title"><a href="">{current pH}</a></h4>
               <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident etiro rabeta lingo.</p>
             </div>
           </div>
@@ -120,7 +120,7 @@ a.float:hover + div.label-container{
 
       </div>
     </section><!-- #services -->
-<a href="#" class="float">
+<a href="{% url 'home:index' %}" class="float">
 <i class="fas fa-home my-float"></i>
 </a>
 <div class="label-container">
