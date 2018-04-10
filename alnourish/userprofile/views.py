@@ -64,3 +64,7 @@ def testc(request):
 @login_required(login_url='/account/login/')
 def imagetest(request):
     return render(request, 'userprofile/imagetest.html')
+
+@login_required(login_url='/account/login/')
+def result(request):
+    return render(request, 'userprofile/result.html')
