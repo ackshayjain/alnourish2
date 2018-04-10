@@ -56,8 +56,8 @@ a.float:hover + div.label-container{
 
 {% endblock %}
 
-{% block about_active %}
-<li><a href="% url 'home:about' %}" class="active"><i class="lnr lnr-home"></i> <span>About Us</span></a></li>
+{% block homes_active %}
+<li><a class="active"><i class="lnr lnr-home"></i> <span>About Us</span></a></li>
 {% endblock %}
 
 {% block main %}
@@ -185,7 +185,7 @@ a.float:hover + div.label-container{
 
       </div>
     </section><!-- #portfolio -->
-<a href="{% url 'profile:imagetest' %}" class="float">
+<a href="{% url 'profile:imagetest' culture.name %}" class="float">
 <i class="fas fa-angle-right my-float"></i>
 </a>
 <div class="label-container">
