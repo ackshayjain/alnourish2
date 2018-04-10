@@ -2,8 +2,8 @@
 {% load static from staticfiles %}
 
 {% block cssfiles %}
-	<link rel="stylesheet" href="{% static 'assets/css/AboutUs.css' %}">
-    <style>
+<link rel="stylesheet" href="{% static 'assets/css/AboutUs.css' %}">
+<style>
 
 
 .label-container{
@@ -52,7 +52,9 @@ a.float:hover + div.label-container{
   visibility: visible;
   opacity: 1;
 }
-    </style>
+
+
+</style>
 
 {% endblock %}
 
@@ -61,153 +63,61 @@ a.float:hover + div.label-container{
 {% endblock %}
 
 {% block main %}
-		<!-- MAIN -->
+<!-- MAIN -->
 <div class="main">
 
-         <section id="intro">
+    <section id="intro">
 
-    <div class="intro-content">
-      <h2>Test your <span>algae culture</span><br></h2>
-    </div>
-
-    <div id="intro-carousel" class="owl-carousel" >
-      <div class="item" style="background-image: url('img/intro-carousel/1.jpg');"></div>
-      <div class="item" style="background-image: url('img/intro-carousel/2.jpg');"></div>
-      <div class="item" style="background-image: url('img/intro-carousel/3.jpg');"></div>
-      <div class="item" style="background-image: url('img/intro-carousel/4.jpg');"></div>
-      <div class="item" style="background-image: url('img/intro-carousel/5.jpg');"></div>
-    </div>
-
-  </section>
-		  <main id="main">
-
-
-<section id="portfolio" class="wow fadeInUp">
-      <div class="container">
-        <div class="section-header">
-          <h2>Step 1</h2>
-          <p>Take 1 pH indicator strip out of the kit and dip it halfway into the water of the culture. <br> Now Observe the colour of the strip and match it to the colour panel closest to it, below. </p>
-        </div>
-      </div>
-
-      <div class="container-fluid">
-        <div class="row no-gutters">
-
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="https://goo.gl/images/cwzDio" class="portfolio-popup">
-                <img src="https://goo.gl/images/cwzDio" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 1</h2></div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/2.jpg" class="portfolio-popup">
-                <img src="img/portfolio/2.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 2</h2></div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/3.jpg" class="portfolio-popup">
-                <img src="img/portfolio/3.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 3</h2></div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/4.jpg" class="portfolio-popup">
-                <img src="img/portfolio/4.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 4</h2></div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/5.jpg" class="portfolio-popup">
-                <img src="img/portfolio/5.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 5</h2></div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/6.jpg" class="portfolio-popup">
-                <img src="img/portfolio/6.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 6</h2></div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/7.jpg" class="portfolio-popup">
-                <img src="img/portfolio/7.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 7</h2></div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-4">
-            <div class="portfolio-item wow fadeInUp">
-              <a href="img/portfolio/8.jpg" class="portfolio-popup">
-                <img src="img/portfolio/8.jpg" alt="">
-                <div class="portfolio-overlay">
-                  <div class="portfolio-info"><h2 class="wow fadeInUp">Portfolio Item 8</h2></div>
-                </div>
-              </a>
-            </div>
-          </div>
-
+        <div class="intro-content">
+            <h2>Test your <span>algae culture {{name}}</span><br></h2>
         </div>
 
-      </div>
-    </section><!-- #portfolio -->
-              {% if name %}
-<a href="{% url 'profile:imagetest' name %}" class="float">
-    {% endif %}
-<i class="fas fa-angle-right my-float"></i>
-</a>
-<div class="label-container">
-<div class="label-text">Step 2</div>
-<i class="fa fa-play label-arrow"></i>
+        <div id="intro-carousel" class="owl-carousel">
+            <div class="item" style="background-image: url('img/intro-carousel/1.jpg');"></div>
+            <div class="item" style="background-image: url('img/intro-carousel/2.jpg');"></div>
+            <div class="item" style="background-image: url('img/intro-carousel/3.jpg');"></div>
+            <div class="item" style="background-image: url('img/intro-carousel/4.jpg');"></div>
+            <div class="item" style="background-image: url('img/intro-carousel/5.jpg');"></div>
+        </div>
+
+    </section>
+    <main id="main">
+
+
+        <section id="portfolio" class="wow fadeInUp">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Step 1</h2>
+                    <p>Take 1 pH indicator strip out of the kit and dip it halfway into the water of the culture. <br>
+                        Now Observe the colour of the strip and match it to the colour panel closest to it, below. </p>
+                </div>
+            </div>
+
+
+        </section><!-- #portfolio -->
+        {% if name %}
+        <a href="{% url 'profile:imagetest' name %}" class="float">
+            {% endif %}
+            <i class="fas fa-angle-right my-float"></i>
+        </a>
+        <div class="label-container">
+            <div class="label-text">Step 2</div>
+            <i class="fa fa-play label-arrow"></i>
+        </div>
+
+    </main>
+    <!-- END MAIN CONTENT -->
 </div>
 
-  </main>
-			<!-- END MAIN CONTENT -->
-		</div>
-
-		<!-- END MAIN -->
+<!-- END MAIN -->
 {% endblock %}
 
 {% block jsfiles %}
-  <script src="lib/easing/easing.min.js"></script>
-  <script src="lib/superfish/hoverIntent.js"></script>
-  <script src="lib/superfish/superfish.min.js"></script>
-  <script src="lib/wow/wow.min.js"></script>
-  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
-  <script src="lib/sticky/sticky.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/superfish/hoverIntent.js"></script>
+<script src="lib/superfish/superfish.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/magnific-popup/magnific-popup.min.js"></script>
+<script src="lib/sticky/sticky.js"></script>
 {% endblock %}
