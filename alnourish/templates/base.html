@@ -35,7 +35,7 @@
 		<!-- NAVBAR -->
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="brand">
-				<a href="index.html"><img src="{% static 'assets/img/logo-dark.png' %}" alt="Klorofil Logo" class="img-responsive logo"></a>
+				<a href="index.html"><img src="{% static 'assets/img/logo-dark.png' %}" alt="ALNourish" class="img-responsive logo"></a>
 			</div>
 			<div class="container-fluid">
 				<div class="navbar-btn">
@@ -49,8 +49,8 @@
 				</form> -->
 				<div class="navbar-btn navbar-btn-right">
 					{% if not request.user.is_authenticated %}
-					<a class="btn btn-success update-pro" href="{% url 'account:login' %}" title="Upgrade to Pro" target="_blank"><i class="fa fa-rocket"></i> <span>Login</span></a>
-					<a class="btn btn-success update-pro" href="{% url 'account:register' %}" title="Upgrade to Pro" target="_blank"><i class="fa fa-rocket"></i> <span>Register</span></a>
+					<a class="btn btn-success update-pro" href="{% url 'account:login' %}" title="Login" target="_blank"><i class="fas fa-sign-in-alt"></i> <span>&nbsp; Login</span></a>
+					<a class="btn btn-success update-pro" href="{% url 'account:register' %}" title="Upgrade to Pro" target="_blank"><i class="fas fa-user"></i> <span>&nbsp; Register</span></a>
 					{% endif %}
 				</div>
 				<div id="navbar-menu">
