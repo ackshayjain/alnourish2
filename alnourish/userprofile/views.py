@@ -58,13 +58,19 @@ def delete_culture(request,name):
     return redirect('profile:index')
 
 @login_required(login_url='/account/login/')
-def testc(request):
-    return render(request, 'userprofile/testculture.html')
+def testc(request,name):
+    context = {'name':name}
+    return render(request, 'userprofile/testculture.html',context)
 
 @login_required(login_url='/account/login/')
-def imagetest(request):
-    return render(request, 'userprofile/imagetest.html')
+def imagetest(request,name):
+
+    context = {'name':name}
+    return render(request, 'userprofile/imagetest.html',context)
 
 @login_required(login_url='/account/login/')
-def result(request):
-    return render(request, 'userprofile/result.html')
+def result(request,name):
+    username = request.user.username
+    culture = Culture.objects.filter(username=username,name=name)
+    context = {'culture':culture}
+    return render(request, 'userprofile/result.html',context)
