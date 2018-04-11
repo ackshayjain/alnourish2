@@ -69,7 +69,7 @@ a.float:hover + div.label-container{
     <section id="intro">
 
         <div class="intro-content">
-            <h2>Test your <span>algae culture {{name}}</span><br></h2>
+            <h2>Test your <span>algae culture {{culture.0.name}}</span><br></h2>
         </div>
 
         <div id="intro-carousel" class="owl-carousel">
@@ -95,9 +95,9 @@ a.float:hover + div.label-container{
 
 
         </section><!-- #portfolio -->
-        {% if name %}
-        <a href="{% url 'profile:imagetest' name %}" class="float">
-            {% endif %}
+
+        <a href="{% url 'profile:imagetest' culture.0.id %}" class="float">
+
             <i class="fas fa-angle-right my-float"></i>
         </a>
         <div class="label-container">

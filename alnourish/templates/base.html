@@ -8,26 +8,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <!-- VENDOR CSS -->
-    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/vendor/font-awesome/css/font-awesome.min.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/vendor/linearicons/style.css' %}">
+    <!--<link rel="stylesheet" href="http://s3.amazonaws.com/alnourishbucket/assets/css/bootstrap.min.css"> &lt;!&ndash;AWS&ndash;&gt;-->
+    <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="assets/css/bootstrap.min.css">-->
+    <link rel="stylesheet"
+          href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet"
+          href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/vendor/linearicons/style.css">
     <!--<link rel="stylesheet" href="{% static 'assets/vendor/chartist/css/chartist-custom.css' %}">-->
-    <link rel="stylesheet" href="{% static 'assets/css/collapzion.min.css' %}">
+    <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/css/collapzion.min.css">
     <!-- MAIN CSS -->
-    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+    <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/css/main.css">
 
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
     <!-- ICONS -->
-    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'assets/img/apple-icon.png' %}">
-    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'assets/img/favicon.png' %}">
+    <link rel="apple-touch-icon" sizes="76x76"
+          href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96"
+          href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/img/favicon.png">
     <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel='stylesheet prefetch' href='https://use.fontawesome.com/releases/v5.0.6/css/all.css'>
 
 
     {% block cssfiles %}
     {% endblock %}
-    
+
     <style>
     .mendi-social-networks {
     width: 100%;
@@ -101,7 +107,8 @@
 	background-color: #248cc9;
 }
 
-</style>
+
+    </style>
 </head>
 
 <body>
@@ -110,8 +117,10 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="brand">
-            <a href="index.html"><img src="{% static 'assets/img/logo-dark.png' %}" alt="Klorofil Logo"
-                                      class="img-responsive logo"></a>
+            <a href="{% url 'home:index' %}"><img
+                    src="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/img/logo-dark.png"
+                    alt="Klorofil Logo"
+                    class="img-responsive logo"></a>
         </div>
         <div class="container-fluid">
             <div class="navbar-btn">
@@ -188,46 +197,46 @@
     {% block main %}
     {% endblock %}
     <div class="row">
-		<ul class="mendi-social-networks">
-            	<div class="col-md-4">
-    	<li class="facebook">
-			<a href="" title="">
-				<i class="fa fa-facebook"> </i>
-				<p>JOIN US ON FACEBOOK</p>
-				<span class="followers">268K Followers</span>
-			</a>
-		</li>
+        <ul class="mendi-social-networks">
+            <div class="col-md-4">
+                <li class="facebook">
+                    <a href="" title="">
+                        <i class="fa fa-facebook"> </i>
+                        <p>JOIN US ON FACEBOOK</p>
+                        <span class="followers">268K Followers</span>
+                    </a>
+                </li>
             </div>
-                        	<div class="col-md-4">
-		<li class="twitter">
-			<a href="" title="">
-				<i class="fa fa-twitter"> </i>
-				<p>FOLLOW US ON TWITTER</p>
-				<span class="followers">268K Followers</span>
-			</a>
-		</li>
+            <div class="col-md-4">
+                <li class="twitter">
+                    <a href="" title="">
+                        <i class="fa fa-twitter"> </i>
+                        <p>FOLLOW US ON TWITTER</p>
+                        <span class="followers">268K Followers</span>
+                    </a>
+                </li>
             </div>
-                        	<div class="col-md-4">
-		<li class="googleplus">
-			<a href="" title="">
-				<i class="fa fa-google-plus"> </i>
-				<p>ADD TO OUR CIRCLE</p>
-				<span class="followers">268K Followers</span>
-			</a>
-		</li>
+            <div class="col-md-4">
+                <li class="googleplus">
+                    <a href="" title="">
+                        <i class="fa fa-google-plus"> </i>
+                        <p>ADD TO OUR CIRCLE</p>
+                        <span class="followers">268K Followers</span>
+                    </a>
+                </li>
             </div>
-	</ul>
-</div>
+        </ul>
+    </div>
 </div>
 <!-- END WRAPPER -->
 <!-- Javascript -->
-<script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
-<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
-<script src="{% static 'assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js' %}"></script>
+<script src="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/vendor/jquery/jquery.min.js"></script>
+<script src="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!--<script src="{% static 'assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js' %}"></script>-->
 <!--<script src="{% static 'assets/vendor/chartist/js/chartist.min.js' %}"></script>-->
-<script src="{% static 'assets/scripts/collapzion.min.js' %}"></script>
-<script src="{% static 'assets/scripts/klorofil-common.js' %}"></script>
+<script src="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/scripts/collapzion.min.js"></script>
+<script src="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/scripts/klorofil-common.js"></script>
 {% block jsfiles %}
 {% endblock %}
 
@@ -239,6 +248,7 @@
 	)
 {% block js %}
 {% endblock %}
+
 </script>
 </body>
 

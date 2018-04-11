@@ -52,25 +52,24 @@ def new_culture(request):
     return render(request, 'userprofile/new.html', context)
 
 @login_required(login_url='/account/login/')
-def delete_culture(request,name):
-    username = request.user.username
-    Culture.objects.filter(username=username,name=name).delete()
+def delete_culture(request,id):
+    Culture.objects.filter(id=id).delete()
     return redirect('profile:index')
 
 @login_required(login_url='/account/login/')
-def testc(request,name):
-    context = {'name':name}
+def testc(request,id):
+    culture = Culture.objects.filter(id=id)
+    context = {'culture': culture}
     return render(request, 'userprofile/testculture.html',context)
 
 @login_required(login_url='/account/login/')
-def imagetest(request,name):
-
-    context = {'name':name}
+def imagetest(request,id):
+    culture = Culture.objects.filter(id=id)
+    context = {'culture': culture}
     return render(request, 'userprofile/imagetest.html',context)
 
 @login_required(login_url='/account/login/')
-def result(request,name):
-    username = request.user.username
-    culture = Culture.objects.filter(username=username,name=name)
+def result(request,id):
+    culture = Culture.objects.filter(id=id)
     context = {'culture':culture}
     return render(request, 'userprofile/result.html',context)
