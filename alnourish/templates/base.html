@@ -125,7 +125,7 @@
         </div>
         <div class="container-fluid">
             <div class="navbar-btn">
-                <button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
+                <button type="button" class="btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></button>
             </div>
             <div class="navbar-btn navbar-btn-right">
                 {% if not request.user.is_authenticated %}
@@ -144,13 +144,13 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <!--<img src="{% static 'assets/img/user.png' %}" class="img-circle" alt="Avatar"> -->
                             <span>{{request.user.username}}</span>
-                            <i class="icon-submenu lnr lnr-chevron-down"></i>
+                            <i class="icon-submenu fa fa-bars"></i>
                         </a>
                         <ul class="dropdown-menu">
                             <!--<li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>-->
                             <!--<li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>-->
                             <!--<li><a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li>-->
-                            <li><a href="{% url 'account:logout' %}"><i class="lnr lnr-exit"></i>
+                            <li><a href="{% url 'account:logout' %}"><i class="fa fa-close"></i>
                                 <span>Logout</span></a></li>
                         </ul>
                     </li>
@@ -169,14 +169,14 @@
             <nav>
                 <ul class="nav">
                     {% block home_active %}
-                    <li><a href="{% url 'home:index' %}"><i class="lnr lnr-home"></i> <span>Home</span></a></li>
+                    <li><a href="{% url 'home:index' %}"><i class="fa fa-home"></i> <span>Home</span></a></li>
                     {% endblock %}
                     {% block about_active %}
-                    <li><a href="{% url 'home:about' %}" class=""><i class="lnr lnr-home"></i> <span>About Us</span></a>
+                    <li><a href="{% url 'home:about' %}" class=""><i class="fa fa-home"></i> <span>About Us</span></a>
                     </li>
                     {% endblock %}
                     {% block contact_active %}
-                    <li><a href="{% url 'home:contact' %}" class=""><i class="lnr lnr-home"></i><span>Contact Us</span></a>
+                    <li><a href="{% url 'home:contact' %}" class=""><i class="fa fa-home"></i><span>Contact Us</span></a>
                     </li>
                     {% endblock %}
                     <!--{% if not request.user.is_authenticated %}-->
@@ -184,10 +184,10 @@
                     <!--{% block register_active %}<li><a href="{% url 'account:register' %}" class=""><i class="lnr lnr-home"></i> <span>Register</span></a></li>{% endblock %}-->
                     <!--{% endif %}-->
                     {% block impact_active %}
-                    <li><a href="OurImpact.html" class=""><i class="lnr lnr-home"></i> <span>Our Impact</span></a></li>
+                    <li><a href="OurImpact.html" class=""><i class="fa fa-home"></i> <span>Our Impact</span></a></li>
                     {% endblock %}
                     {% block blog_active %}
-                    <li><a href="Blog.html" class=""><i class="lnr lnr-home"></i> <span>Blog</span></a></li>
+                    <li><a href="Blog.html" class=""><i class="fa fa-home"></i> <span>Blog</span></a></li>
                     {% endblock %}
                 </ul>
             </nav>
