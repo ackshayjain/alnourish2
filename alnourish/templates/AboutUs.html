@@ -1,0 +1,294 @@
+{% extends 'base.html' %}
+{% load static from staticfiles %}
+
+{% block cssfiles %}
+<link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/css/AboutUs.css">
+<link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/css/styles.min.css">
+<link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/css/styles2.min.css">
+{% endblock %}
+
+{% block about_active %}
+<li><a href="% url 'home:about' %}" class="active"><i class="fa fa-home"></i> <span>About Us</span></a></li>
+{% endblock %}
+
+{% block main %}
+<!-- MAIN -->
+<div class="main">
+
+    <section id="intro">
+
+        <div class="intro-content">
+            <h2>Kicking the <span>M</span><br> out of MalNourish!</h2>
+            <!--<div>-->
+            <!--<a href="#about" class="btn-get-started scrollto">Get Started</a>-->
+            <!--<a href="#portfolio" class="btn-projects scrollto">Our Projects</a>-->
+            <!--</div>-->
+        </div>
+
+        <!--<div id="intro-carousel" class="owl-carousel" >-->
+        <!--<div class="item" style="background-image: url('https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/img/algae.jpg');"></div>-->
+        <!--<div class="item" style="background-image: url('img/intro-carousel/2.jpg');"></div>-->
+        <!--<div class="item" style="background-image: url('img/intro-carousel/3.jpg');"></div>-->
+        <!--<div class="item" style="background-image: url('img/intro-carousel/4.jpg');"></div>-->
+        <!--<div class="item" style="background-image: url('img/intro-carousel/5.jpg');"></div>-->
+        <!--</div>-->
+
+    </section>
+    <main id="main">
+
+        <!--==========================
+          About Section
+        ============================-->
+        <section id="about" class="wow fadeInUp">
+            <!--<div class="container">-->
+                <!--<div class="row">-->
+                    <!--<div class="col-lg-6 about-img">-->
+                        <!--<img src="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/img/algae.jpg" alt="">-->
+                    <!--</div>-->
+
+                    <!--<div class="col-lg-6 content">-->
+                        <!--&lt;!&ndash;<h2>Lorem ipsum dolor sit amet, consectetur adipiscing</h2>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>&ndash;&gt;-->
+                        <!--<h2>-->
+                            <!--ALNourish is a startup founded to help eradicate malnourishment and poverty in Rural Indian-->
+                            <!--Households.-->
+                        <!--</h2>-->
+                        <!--<h3>-->
+                        <!--</h3>-->
+                        <!--<ul>-->
+                            <!--<li><i class="ion-android-checkmark-circle"></i> While the world is struggling to solve the-->
+                                <!--problem of food sustainability by finding new ways to feed the entire population with-->
+                                <!--the existing produce, we explored new avenues and came up with something unconventional-->
+                                <!--yet so basic which would not only satisfy our current needs but also provide additional-->
+                                <!--health benefits. We bring into the limelight an algae - Spirulina which might as well be-->
+                                <!--the food of the future and has the potential to be in everything you eat in the next ten-->
+                                <!--years.-->
+                                <!--Easy to grow and densely packed with protein, these organisms can make our food system-->
+                                <!--more efficient and less resource-intensive.-->
+                            <!--</li>-->
+                            <!--<li><i class="ion-android-checkmark-circle"></i>Algae benefits are so pronounced — due to-->
+                                <!--their high concentrations of vitamins, minerals, antioxidants and proteins — that they-->
+                                <!--are commonly referred to as superfoods.-->
+                            <!--</li>-->
+                            <!--&lt;!&ndash;<li><i class="ion-android-checkmark-circle"></i>Hyped by supplement enthusiasts as providing a number of magical benefits, this superfood may be one of the most nutritious foods known to man and is deemed food of the future.</li>&ndash;&gt;-->
+                        <!--</ul>-->
+
+                    <!--</div>-->
+                <!--</div>-->
+
+            <!--</div>-->
+            <body><div class="container">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="http://placehold.it/1200x400/16a085/ffffff&text=About Us">
+                <div class="carousel-caption">
+                    <h3>
+
+                        Headline</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem
+                        ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+                </div>
+            </div>
+            <!-- End Item -->
+            <div class="item">
+                <img src="http://placehold.it/1200x400/e67e22/ffffff&text=Projects">
+                <div class="carousel-caption">
+                    <h3>
+                        Headline</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem
+                        ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+                </div>
+            </div>
+            <!-- End Item -->
+            <div class="item">
+                <img src="http://placehold.it/1200x400/2980b9/ffffff&text=Portfolio">
+                <div class="carousel-caption">
+                    <h3>
+                        Headline</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem
+                        ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+                </div>
+            </div>
+            <!-- End Item -->
+            <div class="item">
+                <img src="http://placehold.it/1200x400/8e44ad/ffffff&text=Services">
+                <div class="carousel-caption">
+                    <h3>
+                        Headline</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                        tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem
+                        ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+                </div>
+            </div>
+            <!-- End Item -->
+        </div>
+        <!-- End Carousel Inner -->
+        <ul class="nav nav-pills nav-justified">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"><a href="#">About<small>Lorem
+                ipsum dolor sit</small></a></li>
+            <li data-target="#myCarousel" data-slide-to="1"><a href="#">Projects<small>Lorem ipsum
+                dolor sit</small></a></li>
+            <li data-target="#myCarousel" data-slide-to="2"><a href="#">Portfolio<small>Lorem ipsum
+                dolor sit</small></a></li>
+            <li data-target="#myCarousel" data-slide-to="3"><a href="#">Services<small>Lorem ipsum
+                dolor sit</small></a></li>
+        </ul>
+    </div>
+    <!-- End Carousel -->
+</div>
+        </section>
+
+            <!--==========================
+              Our Team Section
+            ============================-->
+            <section class="card-section-imagia">
+                <h1>Our team</h1>
+                <h2>Posset maiora firmatum nunc cuniculis</h2>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4">
+                            <div class="card-container-imagia">
+                                <div class="card-imagia">
+                                    <div class="front-imagia">
+                                        <div class="cover-imagia"><img src="https://unsplash.it/720/500?image=1067"
+                                                                       alt=""></div>
+                                        <div class="user-imagia"><img src="https://unsplash.it/120/120?image=64"
+                                                                      class="img-circle" alt=""></div>
+                                        <div class="content-imagia">
+                                            <h3 class="name-imagia">Devansh Jain Nawal</h3>
+                                            <p class="subtitle-imagia">Subtitle </p>
+                                            <p class="text-center"><em>Tantum autem cuique tribuendum, primum quantum
+                                                ipse efficere possis, deinde etiam quantum ille quem diligas atque
+                                                adiuves.</em></p>
+                                        </div>
+                                        <div class="footer-imagia"><span><i class="fa fa-plus"></i> More info</span>
+                                        </div>
+                                    </div>
+                                    <div class="back-imagia">
+                                        <div class="content-imagia content-back-imagia">
+                                            <div>
+                                                <h3 class="text-center">Lorem Ipsum</h3>
+                                                <p class="text-center">Et hanc quidem praeter oppida multa duae
+                                                    civitates exornant Seleucia opus Seleuci regis, et Claudiopolis quam
+                                                    deduxit coloniam Claudius Caesar. Isaura enim antehac nimium potens,
+                                                    olim subversa ut rebellatrix interneciva
+                                                    aegre vestigia claritudinis pristinae monstrat admodum pauca. </p>
+                                            </div>
+                                        </div>
+                                        <div class="footer-imagia">
+                                            <div class="social-imagia text-center"><a href="#"><i
+                                                    class="fa fa-facebook"></i></a><a href="#"><i
+                                                    class="fa fa-linkedin"></i></a><a href="#"><i
+                                                    class="fa fa-twitter"></i></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="card-container-imagia">
+                                <div class="card-imagia">
+                                    <div class="front-imagia">
+                                        <div class="cover-imagia cover-gradient"></div>
+                                        <div class="user-imagia"><img src="https://unsplash.it/120/120?image=64"
+                                                                      class="img-circle" alt=""></div>
+                                        <div class="content-imagia">
+                                            <h3 class="name-imagia">Ackshay Jain</h3>
+                                            <p class="subtitle-imagia">Subtitle </p>
+                                            <p class="text-center"><em>Tantum autem cuique tribuendum, primum quantum
+                                                ipse efficere possis, deinde etiam quantum ille quem diligas atque
+                                                adiuves. </em></p>
+                                        </div>
+                                        <div class="footer-imagia"><span><i class="fa fa-plus"></i> More info</span>
+                                        </div>
+                                    </div>
+                                    <div class="back-imagia">
+                                        <div class="content-imagia content-back-imagia">
+                                            <div>
+                                                <h3 class="text-center">Lorem Ipsum</h3>
+                                                <p class="text-center">Et hanc quidem praeter oppida multa duae
+                                                    civitates exornant Seleucia opus Seleuci regis, et Claudiopolis quam
+                                                    deduxit coloniam Claudius Caesar. Isaura enim antehac nimium potens,
+                                                    olim subversa ut rebellatrix interneciva
+                                                    aegre vestigia claritudinis pristinae monstrat admodum pauca. </p>
+                                            </div>
+                                        </div>
+                                        <div class="footer-imagia">
+                                            <div class="social-imagia text-center"><a href="#"><i
+                                                    class="fa fa-facebook"></i></a><a href="#"><i
+                                                    class="fa fa-linkedin"></i></a><a href="#"><i
+                                                    class="fa fa-twitter"></i></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="card-container-imagia">
+                                <div class="card-imagia">
+                                    <div class="front-imagia">
+                                        <div class="cover-imagia"><img src="https://unsplash.it/720/500?image=1067"
+                                                                       alt=""></div>
+                                        <div class="user-imagia"><img src="https://unsplash.it/120/120?image=64"
+                                                                      class="img-circle" alt=""></div>
+                                        <div class="content-imagia">
+                                            <h3 class="name-imagia">Riya Pannu</h3>
+                                            <p class="subtitle-imagia">Subtitle </p>
+                                            <p class="text-center"><em>Tantum autem cuique tribuendum, primum quantum
+                                                ipse efficere possis, deinde etiam quantum ille quem diligas atque
+                                                adiuves. </em></p>
+                                        </div>
+                                        <div class="footer-imagia"><span><i class="fa fa-plus"></i> More info</span>
+                                        </div>
+                                    </div>
+                                    <div class="back-imagia">
+                                        <div class="content-imagia content-back-imagia">
+                                            <div>
+                                                <h3 class="text-center">Lorem Ipsum</h3>
+                                                <p class="text-center">Et hanc quidem praeter oppida multa duae
+                                                    civitates exornant Seleucia opus Seleuci regis, et Claudiopolis quam
+                                                    deduxit coloniam Claudius Caesar. Isaura enim antehac nimium potens,
+                                                    olim subversa ut rebellatrix interneciva
+                                                    aegre vestigia claritudinis pristinae monstrat admodum pauca. </p>
+                                            </div>
+                                        </div>
+                                        <div class="footer-imagia">
+                                            <div class="social-imagia text-center"><a href="#"><i
+                                                    class="fa fa-facebook"></i></a><a href="#"><i
+                                                    class="fa fa-linkedin"></i></a><a href="#"><i
+                                                    class="fa fa-twitter"></i></a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+    </main>
+    <!-- END MAIN CONTENT -->
+</div>
+
+<!-- END MAIN -->
+{% endblock %}
+
+{% block jsfiles %}
+<!--<script src="lib/easing/easing.min.js"></script>-->
+<!--<script src="lib/superfish/hoverIntent.js"></script>-->
+<!--<script src="lib/superfish/superfish.min.js"></script>-->
+<!--<script src="lib/wow/wow.min.js"></script>-->
+<!--<script src="lib/owlcarousel/owl.carousel.min.js"></script>-->
+<!--<script src="lib/magnific-popup/magnific-popup.min.js"></script>-->
+<!--<script src="lib/sticky/sticky.js"></script>-->
+{% endblock %}
