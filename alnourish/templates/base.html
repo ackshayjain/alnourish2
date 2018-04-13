@@ -8,26 +8,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <!-- VENDOR CSS -->
-    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/vendor/font-awesome/css/font-awesome.min.css' %}">
-    <link rel="stylesheet" href="{% static 'assets/vendor/linearicons/style.css' %}">
+    <!--<link rel="stylesheet" href="http://s3.amazonaws.com/alnourishbucket/assets/css/bootstrap.min.css"> &lt;!&ndash;AWS&ndash;&gt;-->
+    <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="assets/css/bootstrap.min.css">-->
+    <link rel="stylesheet"
+          href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet"
+          href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/vendor/linearicons/style.css">
     <!--<link rel="stylesheet" href="{% static 'assets/vendor/chartist/css/chartist-custom.css' %}">-->
-    <link rel="stylesheet" href="{% static 'assets/css/collapzion.min.css' %}">
+    <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/css/collapzion.min.css">
     <!-- MAIN CSS -->
-    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+    <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/css/main.css">
 
     <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
     <!-- ICONS -->
-    <link rel="apple-touch-icon" sizes="76x76" href="{% static 'assets/img/apple-icon.png' %}">
-    <link rel="icon" type="image/png" sizes="96x96" href="{% static 'assets/img/favicon.png' %}">
+    <link rel="apple-touch-icon" sizes="76x76"
+          href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96"
+          href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/img/favicon.png">
     <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel='stylesheet prefetch' href='https://use.fontawesome.com/releases/v5.0.6/css/all.css'>
 
 
     {% block cssfiles %}
     {% endblock %}
-    
+
     <style>
     .mendi-social-networks {
     width: 100%;
@@ -101,7 +107,11 @@
 	background-color: #5938F5;
 }
 
-</style>
+
+
+
+
+    </style>
 </head>
 
 <body>
@@ -110,14 +120,17 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="brand">
-            <a href="index.html"><img src="{% static 'assets/img/logo-dark.png' %}" alt="Klorofil Logo"
-                                      class="img-responsive logo"></a>
+            <a href="{% url 'home:index' %}"><img
+                    src="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/img/logo-dark.png"
+                    alt="Klorofil Logo"
+                    class="img-responsive logo"></a>
         </div>
         <div class="container-fluid">
             <div class="navbar-btn">
-                <button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
+                <button type="button" class="btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></button>
             </div>
             <div class="navbar-btn navbar-btn-right">
+                <!--<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVGhD7Zk9SgVBEIQ3ETyCGiiYGwkewKsY6D1MjE29hngBFRNT0cB3BRFMxECtgm1omlHXt+PYA/XBF+xjX/UUu7B/gxBCiOxswN3GrsNqbMEb+PFPXsNNOBsGlQa0lGuYBQ+thb3Dp8Zyps1fg0uzAy3omT80hjNtPteyNCpSidRFVuEhPIf3cAHv4C08hZ60RbYhF2+Z0UvoSVmER+IBWl7JLorwdLKsr+yiyAW0LJ95Bk9Gj6AnZZFHaFnmHvyOlEV4pbYs+gZ/ImURv6ipeSoSmVMkPlu8QMui3I77xNv1FEXsf7/xGHq6LXIAPd0W2YeebovwXsyToohdrc1XaFmU23GfFehJUSTiFzU1T0UiKlJARUZVhKhIARUZVRFS8yW2fyE9Na/aS2yS4bPCFZwNn9oYVBrQQs6u8qHH4GkWH03/2qqf3oQQQlRmGD4BdMQr0ER2nmsAAAAASUVORK5CYII=">-->
                 {% if not request.user.is_authenticated %}
                 <a class="btn btn-success update-pro" href="{% url 'account:login' %}" title="Upgrade to Pro"
                    target="_blank"><i class="fa fa-rocket"></i> <span>Login</span></a>
@@ -126,7 +139,9 @@
                 {% endif %}
             </div>
             <div id="navbar-menu">
+
                 <ul class="nav navbar-nav navbar-right">
+
 
                     {% if request.user.is_authenticated %}
                     <li class="dropdown">
@@ -134,13 +149,13 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <!--<img src="{% static 'assets/img/user.png' %}" class="img-circle" alt="Avatar"> -->
                             <span>{{request.user.username}}</span>
-                            <i class="icon-submenu lnr lnr-chevron-down"></i>
+                            <i class="icon-submenu fa fa-bars"></i>
                         </a>
                         <ul class="dropdown-menu">
                             <!--<li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>-->
                             <!--<li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>-->
                             <!--<li><a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li>-->
-                            <li><a href="{% url 'account:logout' %}"><i class="lnr lnr-exit"></i>
+                            <li><a href="{% url 'account:logout' %}"><i class="fa fa-close"></i>
                                 <span>Logout</span></a></li>
                         </ul>
                     </li>
@@ -149,6 +164,7 @@
                         <a class="update-pro" href="https://www.themeineed.com/downloads/klorofil-pro-bootstrap-admin-dashboard-template/?utm_source=klorofil&utm_medium=template&utm_campaign=KlorofilPro" title="Upgrade to Pro" target="_blank"><i class="fa fa-rocket"></i> <span>UPGRADE TO PRO</span></a>
                     </li> -->
                 </ul>
+
             </div>
         </div>
     </nav>
@@ -159,14 +175,15 @@
             <nav>
                 <ul class="nav">
                     {% block home_active %}
-                    <li><a href="{% url 'home:index' %}"><i class="lnr lnr-home"></i> <span>Home</span></a></li>
+                    <li><a href="{% url 'home:index' %}"><i class="fa fa-home"></i> <span>Home</span></a></li>
                     {% endblock %}
                     {% block about_active %}
-                    <li><a href="{% url 'home:about' %}" class=""><i class="lnr lnr-home"></i> <span>About Us</span></a>
+                    <li><a href="{% url 'home:about' %}" class=""><i class="fa fa-home"></i> <span>About Us</span></a>
                     </li>
                     {% endblock %}
                     {% block contact_active %}
-                    <li><a href="{% url 'home:contact' %}" class=""><i class="lnr lnr-home"></i><span>Contact Us</span></a>
+                    <li><a href="{% url 'home:contact' %}" class=""><i
+                            class="fa fa-home"></i><span>Contact Us</span></a>
                     </li>
                     {% endblock %}
                     <!--{% if not request.user.is_authenticated %}-->
@@ -174,10 +191,10 @@
                     <!--{% block register_active %}<li><a href="{% url 'account:register' %}" class=""><i class="lnr lnr-home"></i> <span>Register</span></a></li>{% endblock %}-->
                     <!--{% endif %}-->
                     {% block impact_active %}
-                    <li><a href="OurImpact.html" class=""><i class="lnr lnr-home"></i> <span>Our Impact</span></a></li>
+                    <li><a href="OurImpact.html" class=""><i class="fa fa-home"></i> <span>Our Impact</span></a></li>
                     {% endblock %}
                     {% block blog_active %}
-                    <li><a href="Blog.html" class=""><i class="lnr lnr-home"></i> <span>Blog</span></a></li>
+                    <li><a href="Blog.html" class=""><i class="fa fa-home"></i> <span>Blog</span></a></li>
                     {% endblock %}
                 </ul>
             </nav>
@@ -188,6 +205,7 @@
     {% block main %}
     {% endblock %}
     <div class="row">
+<<<<<<< HEAD
 		<ul class="mendi-social-networks">
             	<div class="col-md-3">
     	<li class="facebook">
@@ -229,15 +247,58 @@
 	</ul>
 </div>
 </div>
+=======
+        <ul class="mendi-social-networks">
+            <!--<div class="col-md-4">-->
+            <!--<li class="facebook">-->
+            <!--<a href="" title="">-->
+            <!--<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVGhD7Zk9SgVBEIQ3ETyCGiiYGwkewKsY6D1MjE29hngBFRNT0cB3BRFMxECtgm1omlHXt+PYA/XBF+xjX/UUu7B/gxBCiOxswN3GrsNqbMEb+PFPXsNNOBsGlQa0lGuYBQ+thb3Dp8Zyps1fg0uzAy3omT80hjNtPteyNCpSidRFVuEhPIf3cAHv4C08hZ60RbYhF2+Z0UvoSVmER+IBWl7JLorwdLKsr+yiyAW0LJ95Bk9Gj6AnZZFHaFnmHvyOlEV4pbYs+gZ/ImURv6ipeSoSmVMkPlu8QMui3I77xNv1FEXsf7/xGHq6LXIAPd0W2YeebovwXsyToohdrc1XaFmU23GfFehJUSTiFzU1T0UiKlJARUZVhKhIARUZVRFS8yW2fyE9Na/aS2yS4bPCFZwNn9oYVBrQQs6u8qHH4GkWH03/2qqf3oQQQlRmGD4BdMQr0ER2nmsAAAAASUVORK5CYII=">-->
+            <!--<p>JOIN US ON FACEBOOK</p>-->
+            <!--&lt;!&ndash;<span class="followers">268K Followers</span>&ndash;&gt;-->
+            <!--</a>-->
+            <!--</li>-->
+            <a href="https://www.facebook.com/alnourish" target="_blank">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVGhD7Zk9SgVBEIQ3ETyCGiiYGwkewKsY6D1MjE29hngBFRNT0cB3BRFMxECtgm1omlHXt+PYA/XBF+xjX/UUu7B/gxBCiOxswN3GrsNqbMEb+PFPXsNNOBsGlQa0lGuYBQ+thb3Dp8Zyps1fg0uzAy3omT80hjNtPteyNCpSidRFVuEhPIf3cAHv4C08hZ60RbYhF2+Z0UvoSVmER+IBWl7JLorwdLKsr+yiyAW0LJ95Bk9Gj6AnZZFHaFnmHvyOlEV4pbYs+gZ/ImURv6ipeSoSmVMkPlu8QMui3I77xNv1FEXsf7/xGHq6LXIAPd0W2YeebovwXsyToohdrc1XaFmU23GfFehJUSTiFzU1T0UiKlJARUZVhKhIARUZVRFS8yW2fyE9Na/aS2yS4bPCFZwNn9oYVBrQQs6u8qHH4GkWH03/2qqf3oQQQlRmGD4BdMQr0ER2nmsAAAAASUVORK5CYII=">
+            </a>
+                <!--</div>-->
+            <!--<div class="col-md-4">-->
+            <!--<li class="twitter">-->
+            <!--<a href="" title="">-->
+            <!--<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVGhD7Zk9SgVBEIQ3ETyCGiiYGwkewKsY6D1MjE29hngBFRNT0cB3BRFMxECtgm1omlHXt+PYA/XBF+xjX/UUu7B/gxBCiOxswN3GrsNqbMEb+PFPXsNNOBsGlQa0lGuYBQ+thb3Dp8Zyps1fg0uzAy3omT80hjNtPteyNCpSidRFVuEhPIf3cAHv4C08hZ60RbYhF2+Z0UvoSVmER+IBWl7JLorwdLKsr+yiyAW0LJ95Bk9Gj6AnZZFHaFnmHvyOlEV4pbYs+gZ/ImURv6ipeSoSmVMkPlu8QMui3I77xNv1FEXsf7/xGHq6LXIAPd0W2YeebovwXsyToohdrc1XaFmU23GfFehJUSTiFzU1T0UiKlJARUZVhKhIARUZVRFS8yW2fyE9Na/aS2yS4bPCFZwNn9oYVBrQQs6u8qHH4GkWH03/2qqf3oQQQlRmGD4BdMQr0ER2nmsAAAAASUVORK5CYII=">-->
+            <!--<p>FOLLOW US ON TWITTER</p>-->
+            <!--&lt;!&ndash;<span class="followers">268K Followers</span>&ndash;&gt;-->
+            <!--</a>-->
+            <!--</li>-->
+            <!--</div>-->
+            <!--<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVGhD7Zk9SgVBEIQ3ETyCGiiYGwkewKsY6D1MjE29hngBFRNT0cB3BRFMxECtgm1omlHXt+PYA/XBF+xjX/UUu7B/gxBCiOxswN3GrsNqbMEb+PFPXsNNOBsGlQa0lGuYBQ+thb3Dp8Zyps1fg0uzAy3omT80hjNtPteyNCpSidRFVuEhPIf3cAHv4C08hZ60RbYhF2+Z0UvoSVmER+IBWl7JLorwdLKsr+yiyAW0LJ95Bk9Gj6AnZZFHaFnmHvyOlEV4pbYs+gZ/ImURv6ipeSoSmVMkPlu8QMui3I77xNv1FEXsf7/xGHq6LXIAPd0W2YeebovwXsyToohdrc1XaFmU23GfFehJUSTiFzU1T0UiKlJARUZVhKhIARUZVRFS8yW2fyE9Na/aS2yS4bPCFZwNn9oYVBrQQs6u8qHH4GkWH03/2qqf3oQQQlRmGD4BdMQr0ER2nmsAAAAASUVORK5CYII=">-->
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJiSURBVGhD7dg5aFRBHMfxNWoRNYVgJKhBiyhqRIRElGihhSA2AS3VQq09CvGAFLaCCDYxTSyUiHgQCUHULk2KmCrifYCNQoiI9318f4aFx/JXZ+fNvEWYH3xgN8mb+fPy5s1RSklJSUlJSaltGtCK1ZinH/xv2YAb+IKfGY9wBPWozAJsnPzoHzWwZvJjrkxHD7LFWx5jGWZgC87gI1YhVwYwjsW/v/nnLKzCLW/wPvP9FHJlCj5Bjb1AG3yyHeWiqnUJU7ESGk9e0bOZbVR3aiuqiW7GE2TbcfUM5/EQo9Dj5pVFsDroxiy4pB1WG9V4Ct1U70zDV1iNP8cu6N/+t+yGdb2rETQhd27C6qBMj81ezIaVg7Cuc/EWMxEkGhNWJ5U0L1zHAXSgPB/shPX3Ll4iaK7C6uhf9NrWgLV+50LXBkkzNBnqsRmG1VlMelMFyVKowQcYROWyIraLCBItKzTgrE6KcAzBcg5WJ0XYhGDRUvszrI5i0lrLeyb/U/bB6iymK4iS/ShysHciWlbgArJL7Bi0WqhDlGyGBn4/tBq1CghlD6JFk+IErI5DugstVqNmB6zOQ/mO9Sgkh/EDViF5nUCh0UR1B1YxvoaglUTh0RZ2HY7iPqziXN1GI2qWOeiDVZyrMcxFTbIQJ/EaVnGurkEnjlEzHy1YAj1C23Act/ANVmGuPkBb4GiTXjbaqh7CK1jF+NDb7jLyHvZ5ReNAr9x7sIpzoT1NL3wP+IJnLbqg3aIOBqyi5R20TT0NLf5cz8BqFg1UHeLpEE57++XQQZpezSkpKSkpKSnFplT6BTwzqELmM6mBAAAAAElFTkSuQmCC">
+            <!--<div class="col-md-4">-->
+            <!--<li class="googleplus">-->
+            <!--<a href="" title="">-->
+            <!--<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVGhD7Zk9SgVBEIQ3ETyCGiiYGwkewKsY6D1MjE29hngBFRNT0cB3BRFMxECtgm1omlHXt+PYA/XBF+xjX/UUu7B/gxBCiOxswN3GrsNqbMEb+PFPXsNNOBsGlQa0lGuYBQ+thb3Dp8Zyps1fg0uzAy3omT80hjNtPteyNCpSidRFVuEhPIf3cAHv4C08hZ60RbYhF2+Z0UvoSVmER+IBWl7JLorwdLKsr+yiyAW0LJ95Bk9Gj6AnZZFHaFnmHvyOlEV4pbYs+gZ/ImURv6ipeSoSmVMkPlu8QMui3I77xNv1FEXsf7/xGHq6LXIAPd0W2YeebovwXsyToohdrc1XaFmU23GfFehJUSTiFzU1T0UiKlJARUZVhKhIARUZVRFS8yW2fyE9Na/aS2yS4bPCFZwNn9oYVBrQQs6u8qHH4GkWH03/2qqf3oQQQlRmGD4BdMQr0ER2nmsAAAAASUVORK5CYII=">-->
+            <!--<p>ADDDD TO OUR CIRCLE</p>-->
+            <!--&lt;!&ndash;<span class="followers">268K Followers</span>&ndash;&gt;-->
+            <!--</a>-->
+            <!--</li>-->
+            <!--</div>-->
+            <a href ="https://www.instagram.com/alnourishofficial" target="_blank">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMNSURBVGhD7Zm3rhUxEIaPRIYWaAgNoSA1FIQnIBZAT4GAZyEH8RQgwVuAkIiiICPegEwBIv0fd0caLO853l2v0ZX8S5+012uPPdfrGdtnUlVVVVU1X7VCbBY7e0Lb5eK/aKO4IN6I35l4LbCJ7dG1VFwT30VsMDn4Jq4K+hpFq8Rd0db5u57QNmbzjqDPrFomQieeilNijRgqbGDrmfB90OdikU1Mte/gnFgocgubrBPf1yWRRZuEXxM4Mba8M/S9QQzWRWFG+ZzGmIkTgllf/fevuT6eC+v3vBgswqIZPElBolhXe8TRBp4pC7Ve/BLYv0JBo9PC+n1JwRCR7MwYpCzsHeK6+Cp8W6CMd9uFiWT4VuDMcQoarRW+7aCkyfowQ4TJaVog+AR+Cj+AGNQ5K2iDGOS6ucd/5EMzY+kt/nNm6AMFLWJAt4TVNd6L+w08h+9vCnMmJvq0un4WOyvVEWbC6sEjsU/4wMDzfvFY+LrMTJuKOsKa8J8Ta2CJaBPvbgir/0NsEzEVdcQP6qFIycTUeSKsHTZiKuYI4fSLsDoHRKoOCmv3WcRCczFH9gp7z2KetnBDLRIfhbXfLUIVc+SYsPf3KOgoopm1J2mGqo6EmuUI2w57z6fVZR/Gp/VJWPtdIlQxR8LFzgJO1SFh7VjssRNhMUeQD78kwpTwy6B9+CX3xFTUEer4hIhj087bvAsT4lYRU1FHENsMqwdsQ/h0wi3KYRFuUc6INhV3hPzBBtDq+jZEpgfC5wyj2Kax6zaemUnZxvM5MROzEmi2bXyfgxUbQBavj2YGZbzbImaJ84lvO/g20h91OX6mikXNtuNIA8/TgkCorEdd5G80uHfqkvT6imT5Qli/WS4fuIv110E4Nra4y7L+WCdZroPQZWGGzZkxZgab3gngOiqbyNbhlSlTz3ccuzToKmxg65XwfdwWWa9MERfKXCz7jgymP3ZBnYIPsR6cWClGEedtpr6t8xxgm2vZaef+bCIAEEkIi7HB9AFbJNQiP/TERKKatz+9VVVVVVUN0GTyB4vl8z4cF/0SAAAAAElFTkSuQmCC">
+            </a>
+                <!--<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVGhD7Zk9SgVBEIQ3ETyCGiiYGwkewKsY6D1MjE29hngBFRNT0cB3BRFMxECtgm1omlHXt+PYA/XBF+xjX/UUu7B/gxBCiOxswN3GrsNqbMEb+PFPXsNNOBsGlQa0lGuYBQ+thb3Dp8Zyps1fg0uzAy3omT80hjNtPteyNCpSidRFVuEhPIf3cAHv4C08hZ60RbYhF2+Z0UvoSVmER+IBWl7JLorwdLKsr+yiyAW0LJ95Bk9Gj6AnZZFHaFnmHvyOlEV4pbYs+gZ/ImURv6ipeSoSmVMkPlu8QMui3I77xNv1FEXsf7/xGHq6LXIAPd0W2YeebovwXsyToohdrc1XaFmU23GfFehJUSTiFzU1T0UiKlJARUZVhKhIARUZVRFS8yW2fyE9Na/aS2yS4bPCFZwNn9oYVBrQQs6u8qHH4GkWH03/2qqf3oQQQlRmGD4BdMQr0ER2nmsAAAAASUVORK5CYII=">-->
+        </ul>
+    </div>
+
+>>>>>>> 777fd57c659305b6a053184f4f53a02a37783401
 <!-- END WRAPPER -->
 <!-- Javascript -->
-<script src="{% static 'assets/vendor/jquery/jquery.min.js' %}"></script>
-<script src="{% static 'assets/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
-<script src="{% static 'assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js' %}"></script>
+<script src="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/vendor/jquery/jquery.min.js"></script>
+<script src="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!--<script src="{% static 'assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js' %}"></script>-->
 <!--<script src="{% static 'assets/vendor/chartist/js/chartist.min.js' %}"></script>-->
-<script src="{% static 'assets/scripts/collapzion.min.js' %}"></script>
-<script src="{% static 'assets/scripts/klorofil-common.js' %}"></script>
+<script src="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/scripts/collapzion.min.js"></script>
+<script src="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/scripts/klorofil-common.js"></script>
+    <script src="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/scripts/script.min.js"></script>
 {% block jsfiles %}
 {% endblock %}
 
@@ -249,6 +310,10 @@
 	)
 {% block js %}
 {% endblock %}
+
+
+
+
 </script>
 </body>
 

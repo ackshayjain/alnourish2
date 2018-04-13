@@ -5,6 +5,7 @@ from .models import Culture
 
 class CultureAdmin(admin.ModelAdmin):
     list_display = [
+        'id',
         'username',
         'name',
         'volume',

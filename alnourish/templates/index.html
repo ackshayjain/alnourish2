@@ -1,63 +1,74 @@
 {% extends 'base.html' %}
 {% load static from staticfiles %}
 {% block home_active %}
-<li><a href="{% url 'home:index' %}" class="active"><i class="lnr lnr-home"></i> <span>Home</span></a></li>
+<li><a href="{% url 'home:index' %}" class="active"><i class="fa fa-home"></i> <span>Home</span></a></li>
 {% endblock %}
 
 {% block main %}
 
 
 <div class="main">
-			<!-- MAIN CONTENT -->
+    <!-- MAIN CONTENT -->
 
-            <div id="gtco-portfolio" class="gtco-section">
-		<div class="gtco-container" id="events">
+    <div id="gtco-portfolio" class="gtco-section">
+        <div class="gtco-container" id="events">
 
-			<div class="row row-pb-md">
-				<div class="col-md-12">
-					<ul id="gtco-portfolio-list">
-						<li class="one-half animate-box" data-animate-effect="fadeIn" style="background-image: url({% static 'assets/img/tiles/1.jpg' %}); ">
-							<a href="{% url 'profile:index' %}" class="color-1">
-								<div class="case-studies-summary">
-									<h2></h2>
-								</div>
-							</a>
-						</li>
+            <div class="row row-pb-md">
+                <div class="col-md-12">
+                    <ul id="gtco-portfolio-list">
+                        <li class="one-half animate-box" data-animate-effect="fadeIn"
+                            style="background-image: url(https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/img/1.jpg); ">
+                            <a href="{% url 'profile:index' %}" class="color-1">
+                                <div class="case-studies-summary">
+                                    <h2></h2>
+                                </div>
+                            </a>
+                        </li>
 
-						<li class="one-half animate-box" data-animate-effect="fadeIn" style="background-image: url({% static 'assets/img/tiles/2.jpg' %}); ">
-							<a href="./Literary.html" class="color-2">
-								<div class="case-studies-summary">
-									<h2></h2>
-								</div>
-							</a>
-						</li>
+                        <li class="one-half animate-box" data-animate-effect="fadeIn"
+                            style="background-image: url(https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/img/2.jpg); ">
+                            <a href="./Literary.html" class="color-2">
+                                <div class="case-studies-summary">
+                                    <h2></h2>
+                                </div>
+                            </a>
+                        </li>
 
-						<li class="one-half animate-box" data-animate-effect="fadeIn" style="background-image: url({% static 'assets/img/tiles/3.jpg' %}); ">
-							<a href="{% url 'profile:index' %}" class="color-3">
-								<div class="case-studies-summary">
-									<h2></h2>
-								</div>
-							</a>
-						</li>
+                        <li class="one-half animate-box" data-animate-effect="fadeIn"
+                            style="background-image: url(https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/img/3.jpg); ">
+                            <a href="{% url 'profile:index' %}" class="color-3">
+                                <div class="case-studies-summary">
+                                    <h2></h2>
+                                </div>
+                            </a>
+                        </li>
 
-						<li class="one-half animate-box" data-animate-effect="fadeIn" style="background-image: url({% static 'assets/img/tiles/4.jpg' %}); ">
+                        <li class="one-half animate-box" data-animate-effect="fadeIn"
+                            style="background-image: url(https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/img/4.jpg); ">
 
-							<a href="./Literary.html" class="color-4">
-								<div class="case-studies-summary">
-									<h2></h2>
-								</div>
-							</a>
-						</li>
-
-
-
-								</div>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
+                            <a href="./Literary.html" class="color-4">
+                                <div class="case-studies-summary">
+                                    <h2></h2>
+                                </div>
+                            </a>
+                        </li>
 
 
-		</div>
-{% endblock %}
+                </div>
+                </a>
+                </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- <div class="row">
+            <div class="col-md-4 col-md-offset-4 text-center animate-box">
+                <a href="#" class="btn btn-white btn-outline btn-lg btn-block">See All Our Works</a>
+            </div>
+        </div> -->
+
+
+    </div>
+    {% endblock %}
+
+

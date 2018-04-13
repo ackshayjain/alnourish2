@@ -3,12 +3,14 @@
 bin/
 include/
 pip-selfcheck.json
+db.sqlite3
 alnourish/db.sqlite3
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-
+static/
+staticfiles/
 # C extensions
 *.so
 

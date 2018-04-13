@@ -9,6 +9,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 alnourish/db.sqlite3
+alnourish/staticfiles
 # C extensions
 *.so
 
