@@ -12,11 +12,16 @@ def about(request):
 def contact(request):
 	return render(request,'ContactUs.html')
 
-def login(request):
-	return render(request,'Login.html')
-	
-def register(request):
-	return render(request,'Register.html')
+# def login(request):
+# 	return render(request,'Login.html')
+#
+# def register(request):
+# 	return render(request,'Register.html')
+
+def team(request):
+	return render(request, 'team.html')
+
+
 	
 	
 	
