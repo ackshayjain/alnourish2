@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from .models import Contact
+# from .models import Contact
 from .forms import ContactForm
 
 
@@ -13,6 +13,9 @@ def index(request):
 def about(request):
     return render(request, 'AboutUs.html')
 
+def impact(request):
+    return render(request, 'OurImpact.html')
+
 
 def contact(request):
 
@@ -21,18 +24,18 @@ def contact(request):
 
         form = ContactForm(request.POST)
 
-        if form.is_valid():
-            name = request.POST.get('name', '')
-            email = request.POST.get('email', '')
-            phone = request.POST.get('phone', '')
-            comments = request.POST.get('comments', '')
-            # culture_qs = Culture.objects.filter(username=username, name=name)
-
-            contact_obj = Contact(name=name, email=email, phone=phone, comments=comments)
-
-            contact_obj.save()
-            message = 'SUCCESSFULLY POSTED'
-            return redirect('home:contact')
+        # if form.is_valid():
+        #     name = request.POST.get('name', '')
+        #     email = request.POST.get('email', '')
+        #     phone = request.POST.get('phone', '')
+        #     comments = request.POST.get('comments', '')
+        #     # culture_qs = Culture.objects.filter(username=username, name=name)
+        #
+        #     contact_obj = Contact(name=name, email=email, phone=phone, comments=comments)
+        #
+        #     contact_obj.save()
+        #     message = 'SUCCESSFULLY POSTED'
+        return redirect('home:contact')
 
     else:
         form = ContactForm()

@@ -1,18 +1,28 @@
+db.sqlite3
+alnourish/db.sqlite3
+staticfiles/assets
+templates/contactbackup.html
+userprofile/migrations
+vs/migrations
+accounts/migrations
+static/
+
+
 .DS_Store
 .py[cod]
 bin/
 include/
 pip-selfcheck.json
-db.sqlite3
-alnourish/db.sqlite3
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
-staticfiles/assets
+
 # C extensions
 *.so
-templates/contactbackup.html
+
+
 # Distribution / packaging
 .Python
 build/

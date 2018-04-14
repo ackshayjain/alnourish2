@@ -15,8 +15,8 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(primary_key=True, serialize=False)),
                 ('name', models.CharField(max_length=20)),
-                ('email', models.CharField(max_length=20)),
-                ('contact', models.IntegerField()),
+                ('email', models.CharField(max_length=200)),
+                ('phone', models.IntegerField()),
                 ('comments', models.CharField(max_length=200)),
                 ('date_published', models.DateTimeField(auto_now_add=True)),
                 ('date_modified', models.DateTimeField(auto_now=True)),
