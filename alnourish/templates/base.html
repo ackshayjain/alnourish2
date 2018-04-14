@@ -35,77 +35,6 @@
     {% endblock %}
 
     <style>
-    .mendi-social-networks {
-    width: 100%;
-    margin: 0;
-}
-.mendi-social-networks li {
-	float: left;
-	display: inline;
-	width: 112%;	
-	color: #ffffff;
-	position: relative;
-    left: -11%;
-} 
-.mendi-social-networks li i {
-	font-size: 50px;
-	float: left;
-	width: 60px;
-}
-.mendi-social-networks li a {
-	color: #ffffff;
-	padding: 25px 65px 25px 40px;
-	float: left;
-	width: 100%;
-	box-sizing: border-box;
-    
-}
-.mendi-social-networks li a:hover {
-     text-decoration:none;    
-}
-.mendi-social-networks li p {
-	font-size: 13px;
-	font-weight: 600;
-	letter-spacing: 0.5px;
-	text-transform: uppercase;
-	margin: 2px 0 0px;
-}
-.mendi-social-networks li .followers {
-	text-transform: uppercase;
-}
-.mendi-social-networks li:before {
-	position: absolute;
-	content: "\f105";
-	right: 30px;
-	top: 0;
-	bottom: 0;
-	height: 30px;
-	width: 30px;
-	border: 1px solid #ffffff;
-	border-radius: 30px;
-	margin: auto;
-	font-size: 18px;
-	font-family: FontAwesome;
-	color: #ffffff;
-	text-align: center;
-	line-height: 26px;
-}
-.mendi-social-networks li:hover:before {
-	background-color: #ffffff;
-	color: #999999;
-}
-.mendi-social-networks li.facebook {
-	background-color: #4d6bab;
-}
-.mendi-social-networks li.twitter {
-	background-color: #4ec6f8;
-}
-.mendi-social-networks li.googleplus {
-	background-color: #d34836;
-}
-.mendi-social-networks li.linkedin {
-	background-color: #248cc9;
-}
 
 .social ul.social_icons li {
     display: inline-block;
@@ -217,16 +146,16 @@
                     <li><a href="{% url 'home:index' %}"><i class="fa fa-home"></i> <span>Home</span></a></li>
                     {% endblock %}
                     {% block about_active %}
-                    <li><a href="{% url 'home:about' %}" class=""><i class="fa fa-home"></i> <span>About Us</span></a>
+                    <li><a href="{% url 'home:about' %}" class=""><i class="fas fa-comments"></i> <span>About Us</span></a>
                     </li>
                     {% endblock %}
                     {% block about_team %}
-                    <li><a href="{% url 'home:team' %}" class=""><i class="fa fa-home"></i> <span>Our Team</span></a>
+                    <li><a href="{% url 'home:team' %}" class=""><i class="fas fa-users"></i> <span>Our Team</span></a>
                     </li>
                     {% endblock %}
                     {% block contact_active %}
                     <li><a href="{% url 'home:contact' %}" class=""><i
-                            class="fa fa-home"></i><span>Contact Us</span></a>
+                            class="fas fa-bullhorn"></i><span>Contact Us</span></a>
                     </li>
                     {% endblock %}
                     <!--{% if not request.user.is_authenticated %}-->
@@ -234,10 +163,10 @@
                     <!--{% block register_active %}<li><a href="{% url 'account:register' %}" class=""><i class="lnr lnr-home"></i> <span>Register</span></a></li>{% endblock %}-->
                     <!--{% endif %}-->
                     {% block impact_active %}
-                    <li><a href="OurImpact.html" class=""><i class="fa fa-home"></i> <span>Our Impact</span></a></li>
+                    <li><a href="OurImpact.html" class=""><i class="fas fa-globe"></i> <span>Our Impact</span></a></li>
                     {% endblock %}
                     {% block blog_active %}
-                    <li><a href="Blog.html" class=""><i class="fa fa-home"></i> <span>Blog</span></a></li>
+                    <li><a target="_blank" href="http://labs.tffchallenge.com/team/2018/2222-alnourish/" class=""><i class="fas fa-edit"></i> <span>Blog</span></a></li>
                     {% endblock %}
                 </ul>
             </nav>
@@ -247,7 +176,6 @@
     <!-- MAIN -->
     {% block main %}
     {% endblock %}
-    	<div class="row">
   
 	<div class="social">
             <ul class="social_icons text-center">
@@ -258,7 +186,6 @@
             
          </ul>
      </div>
-	</div>
 
 </div>
 
