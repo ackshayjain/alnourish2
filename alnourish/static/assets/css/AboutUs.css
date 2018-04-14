@@ -568,6 +568,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-style: italic;
 }
 
+#services h3 {
+  color: #555;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+  font-style: italic;
+}
+
 #about .content p {
   line-height: 26px;
 }
