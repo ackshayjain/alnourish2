@@ -39,7 +39,7 @@ def contact(request):
 
     context = {'form': form}
 
-    return render(request, 'contactus.html',context)
+    return render(request, 'ContactUs.html',context)
 
 
 

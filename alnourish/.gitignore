@@ -13,7 +13,7 @@ static/assets
 staticfiles/assets
 # C extensions
 *.so
-
+templates/contactbackup.html
 # Distribution / packaging
 .Python
 build/

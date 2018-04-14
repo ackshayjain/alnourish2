@@ -16,272 +16,201 @@
 <div class="main">
 
 
-    <!--<main id="main">-->
+    <div>
+        <div class="container-fluid">
+            <h1>Contact Information</h1>
+            <hr>
+            <form action="" method="post" enctype="multipart/form-data"><input class="form-control" type="hidden"
+                                                                               name="Introduction"
+                                                                               value="This email was sent from www.awebsite.com"><input
+                    class="form-control" type="hidden" name="subject" value="Awebsite.com Contact Form"><input
+                    class="form-control" type="hidden"
+                    name="to" value="email@awebsite.com">
+                <!--<div class="form-row">-->
+                <!--<div class="col-md-6">-->
+                <!--<div id="successfail"></div>-->
+                <!--</div>-->
+                <!--</div>-->
+                <div class="form-row">
+                    <div class="col-12 col-md-6">
+                        <h2 class="h4"><i class="fa fa-envelope"></i> Contact Us
+                            <small>
+                                <small class="required-input">&nbsp;(*required)</small>
+                            </small>
+                        </h2>
+                        {% csrf_token %}
+                        {{form}}
 
 
-    <!--==========================
-      Contact Section
-    ============================-->
-    <!--<section id="contact" class="wow fadeInUp">-->
-    <!--<div class="container">-->
-    <!--<div class="section-header">-->
-    <!--<h2>Get In Touch</h2>-->
-    <!--<p>Are you a user of our kits? Or are you just interested in what we're doing? Reach out to us below </p>-->
-    <!--</div>-->
-
-    <!--<div class="row contact-info">-->
-
-    <!--<div class="col-md-4">-->
-    <!--<div class="contact-address">-->
-    <!--<i class="ion-ios-location-outline"></i>-->
-    <!--<h3>Address</h3>-->
-    <!--<address>NSIT, Sector - 3, Dwarka<br>New Delhi, India</address>-->
-    <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="col-md-4">-->
-    <!--<div class="contact-phone">-->
-    <!--<i class="ion-ios-telephone-outline"></i>-->
-    <!--<h3>Phone Number</h3>-->
-    <!--<p><a href="tel:+919891468273">+91 9891468273</a></p>-->
-    <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="col-md-4">-->
-    <!--<div class="contact-email">-->
-    <!--<i class="ion-ios-email-outline"></i>-->
-    <!--<h3>Email</h3>-->
-    <!--<p><a href="mailto:alnourish.official@gmail.com">alnourish.official@gmail.com</a></p>-->
-    <!--</div>-->
-    <!--</div>-->
-
-    <!--</div>-->
-    <!--</div>-->
-
-    <!--<div class="container">-->
-    <!--<div class="form">-->
-    <!--<div id="sendmessage">Your message has been sent. Thank you!</div>-->
-    <!--<div id="errormessage"></div>-->
-    <!--<form action="" method="post" role="form" class="contactForm">-->
-    <!--<div class="form-row">-->
-    <!--<div class="form-group col-md-6">-->
-    <!--<input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />-->
-    <!--<div class="validation"></div>-->
-    <!--</div>-->
-    <!--<div class="form-group col-md-6">-->
-    <!--<input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />-->
-    <!--<div class="validation"></div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="form-group">-->
-    <!--<input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />-->
-    <!--<div class="validation"></div>-->
-    <!--</div>-->
-    <!--<div class="form-group">-->
-    <!--<textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>-->
-    <!--<div class="validation"></div>-->
-    <!--</div>-->
-    <!--<div class="text-center"><button type="submit">Send Message</button></div>-->
-    <!--</form>-->
-    <!--</div>-->
-
-    <!--</div>-->
-    <!--</section>&lt;!&ndash; #contact &ndash;&gt;-->
-
-    <!--</main>-->
-    <!--&lt;!&ndash; END MAIN CONTENT &ndash;&gt;-->
-    <!--</div>-->
-    <!---->
-    <!-- END MAIN -->
-    <!--<div>-->
-    <div class="container-fluid">
-        <h1>Contact Information</h1>
-        <hr>
-        <form action="" method="post" enctype="multipart/form-data">
-            <!--<div class="form-row">-->
-            <!--<div class="col-md-6">-->
-            <!--<div id="successfail"></div>-->
-            <!--</div>-->
-            <!--</div>-->
-            <div class="form-row">
-                <div class="col-12 col-md-6" id="message">
-                    <h2 class="h4"><i class="fa fa-envelope"></i> Contact Us
-                        <small>
-                            <small class="required-input">&nbsp;(*required)</small>
-                        </small>
-                    </h2>
-
-
-                    {% csrf_token %}
-                    {{form}}
-
-                    <button class="btn btn-primary btn-block" type="submit">Submit<i
-                            class="fa fa-chevron-circle-right"></i></button>
-                </div>
-        </form>
-
-    </div>
-    <div class="col-12 col-md-6">
-        <h2 class="h4"><i class="fa fa-location-arrow"></i>Locate Us</h2>
-        <div class="form-row">
-            <div class="col-12">
-                <div class="static-map"><a
-                        href="https://www.google.com/maps/place/NSIT/@28.60909,77.0325413,17z/data=!3m1!4b1!4m5!3m4!1s0x390d053598c51329:0xd9f8e18fb2ebfce2!8m2!3d28.60909!4d77.03473"
-                        target="_blank" rel="noopener"> <img class="img-fluid"
-                                                             src="http://maps.googleapis.com/maps/api/staticmap?autoscale=2&amp;size=600x210&amp;maptype=roadmap&amp;format=png&amp;visual_refresh=true&amp;markers=size:mid%7Ccolor:0xff0000%7Clabel:NSIT%7C28.60909,77.0325413&amp;key=AIzaSyAmCX1OkG85ewF-iDVRV1vhedwj3B0EMSA&amp;zoom=13"
-                                                             alt="Google Map Of New Delhi India"></a>
-                </div>
-            </div>
-            <div class="col-sm-6 col-md-12 col-lg-6">
-                <h2 class="h4"><i class="fa fa-user"></i> Our Info</h2>
-                <div><span><strong>Name</strong></span></div>
-                <div><span>email@awebsite.com</span></div>
-                <div><span>www.awebsite.com</span></div>
-                <hr class="d-sm-none d-md-block d-lg-none">
-            </div>
-            <div class="col-sm-6 col-md-12 col-lg-6">
-                <h2 class="h4"><i class="fa fa-location-arrow"></i> Our Address</h2>
-                <div><span><strong>Office Name</strong></span></div>
-                <div><span>55 Icannot Dr</span></div>
-                <div><span>Daytone Beach, FL 85150</span></div>
-                <div><abbr data-toggle="tooltip" data-placement="top"
-                           title="Office Phone: 555-867-5309">O:</abbr> 555-867-5309
-                </div>
-                <hr class="d-sm-none">
-            </div>
-        </div>
-    </div>
-</div>
-</form>
-</div>
-<div class="modal fade" role="dialog" tabindex="-1" id="modal1">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">Contact Information</h4>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                        aria-hidden="true">×</span></button>
-            </div>
-            <div class="modal-body">
-                <form action="javascript:void(0);" method="get" id="contactForm"><input class="form-control"
-                                                                                        type="hidden"
-                                                                                        name="Introduction"
-                                                                                        value="This email was sent from www.awebsite.com"><input
-                        class="form-control" type="hidden" name="subject" value="Awebsite.com Contact Form"><input
-                        class="form-control"
-                        type="hidden" name="to" value="email@awebsite.com">
-                    <div class="form-row">
-                        <div class="col-md-6">
-                            <div id="successfail"></div>
+                        <div class="col">
+                            <button class="btn btn-primary btn-block" type="submit">Submit <i
+                                    class="fa fa-chevron-circle-right"></i></button>
                         </div>
+
+                        <hr class="d-flex d-md-none">
                     </div>
-                    <div class="form-row">
-                        <div class="col-12 col-md-6" id="message">
-                            <h2 class="h4"><i class="fa fa-envelope"></i> Contact Us
-                                <small>
-                                    <small class="required-input">&nbsp;(*required)</small>
-                                </small>
-                            </h2>
-                            <div class="form-group"><label for="from-name">Name</label><span
-                                    class="required-input">*</span>
-                                <div class="input-group">
-                                    <div class="input-group-prepend"><span class="input-group-text"><i
-                                            class="fa fa-user-o"></i></span></div>
-                                    <input class="form-control" type="text" name="name" required=""
-                                           placeholder="Full Name" id="from-name"></div>
-                            </div>
-                            <div class="form-group"><label for="from-email">Email</label><span
-                                    class="required-input">*</span>
-                                <div class="input-group">
-                                    <div class="input-group-prepend"><span class="input-group-text"><i
-                                            class="fa fa-envelope-o"></i></span></div>
-                                    <input class="form-control" type="text" name="email" required=""
-                                           placeholder="Email Address" id="from-email"></div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                                    <div class="form-group"><label for="from-phone">Phone</label><span
-                                            class="required-input">*</span>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend"><span class="input-group-text"><i
-                                                    class="fa fa-phone"></i></span></div>
-                                            <input class="form-control" type="text" name="phone" required=""
-                                                   placeholder="Primary Phone" id="from-phone"></div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                                    <div class="form-group"><label for="from-calltime">Best Time to
-                                        Call</label>
-                                        <div class="input-group">
-                                            <div class="input-group-prepend"><span class="input-group-text"><i
-                                                    class="fa fa-clock-o"></i></span></div>
-                                            <select class="form-control" name="call time"
-                                                    id="from-calltime">
-                                                <optgroup label="Best Time to Call">
-                                                    <option value="Morning" selected="">Morning</option>
-                                                    <option value="Afternoon">Afternoon</option>
-                                                    <option value="Evening">Evening</option>
-                                                </optgroup>
-                                            </select></div>
-                                    </div>
+                    <div class="col-12 col-md-6">
+                        <h2 class="h4"><i class="fa fa-location-arrow"></i> Locate Us</h2>
+                        <div class="form-row">
+                            <div class="col-12">
+                                <div class="static-map"><a
+                                        href="https://www.google.com/maps/place/NSIT/@28.60909,77.0325413,17z/data=!3m1!4b1!4m5!3m4!1s0x390d053598c51329:0xd9f8e18fb2ebfce2!8m2!3d28.60909!4d77.03473"
+                                        target="_blank" rel="noopener"> <img class="img-fluid"
+                                                                             src="http://maps.googleapis.com/maps/api/staticmap?autoscale=2&amp;size=600x210&amp;maptype=roadmap&amp;format=png&amp;visual_refresh=true&amp;markers=size:mid%7Ccolor:0xff0000%7Clabel:NSIT%7C28.60909,77.0325413&amp;key=AIzaSyAmCX1OkG85ewF-iDVRV1vhedwj3B0EMSA&amp;zoom=13"
+                                                                             alt="Google Map Of New Delhi India"></a>
                                 </div>
                             </div>
-                            <div class="form-group"><label for="from-comments">Comments</label><textarea
-                                    class="form-control" rows="5" name="comments"
-                                    placeholder="Enter Comments" id="from-comments"></textarea></div>
-                            <div class="form-group">
-                                <div class="form-row">
-                                    <div class="col">
-                                        <button class="btn btn-primary btn-block" type="reset"><i
-                                                class="fa fa-undo"></i> Reset
-                                        </button>
-                                    </div>
-                                    <div class="col">
-                                        <button class="btn btn-primary btn-block" type="submit">Submit <i
-                                                class="fa fa-chevron-circle-right"></i></button>
-                                    </div>
-                                </div>
+                            <div class="col-sm-6 col-md-12 col-lg-6">
+                                <h2 class="h4"><i class="fa fa-user"></i> Our Info</h2>
+                                <div><span><strong>Name</strong></span></div>
+                                <div><span>email@awebsite.com</span></div>
+                                <div><span>www.awebsite.com</span></div>
+                                <hr class="d-sm-none d-md-block d-lg-none">
                             </div>
-                            <hr class="d-flex d-md-none">
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <h2 class="h4"><i class="fa fa-location-arrow"></i> Locate Us</h2>
-                            <div class="form-row">
-                                <div class="col-12">
-                                    <div class="static-map"><a
-                                            href="https://www.google.com/maps/place/Daytona+International+Speedway/@29.1815062,-81.0744275,15z/data=!4m13!1m7!3m6!1s0x88e6d935da1cced3:0xa6b3e1bc0f2fc83a!2s1801+W+International+Speedway+Blvd,+Daytona+Beach,+FL+32114!3b1!8m2!3d29.187028!4d-81.0703076!3m4!1s0x88e6d949a4cb8593:0x1387c6c0b5c8cc97!8m2!3d29.1851681!4d-81.0705292"
-                                            target="_blank" rel="noopener"> <img class="img-fluid"
-                                                                                 src="http://maps.googleapis.com/maps/api/staticmap?autoscale=2&amp;size=600x210&amp;maptype=roadmap&amp;format=png&amp;visual_refresh=true&amp;markers=size:mid%7Ccolor:0xff0000%7Clabel:%7C582+1801+W+International+Speedway+Blvd+Daytona+Beach+FL+32114&amp;zoom=12"
-                                                                                 alt="Google Map of Daytona International Speedway"></a>
-                                    </div>
+                            <div class="col-sm-6 col-md-12 col-lg-6">
+                                <h2 class="h4"><i class="fa fa-location-arrow"></i> Our Address</h2>
+                                <div><span><strong>Office Name</strong></span></div>
+                                <div><span>55 Icannot Dr</span></div>
+                                <div><span>Daytone Beach, FL 85150</span></div>
+                                <div><abbr data-toggle="tooltip" data-placement="top"
+                                           title="Office Phone: 555-867-5309">O:</abbr> 555-867-5309
                                 </div>
-                                <div class="col-sm-6 col-md-12 col-lg-6">
-                                    <h2 class="h4"><i class="fa fa-user"></i> Our Info</h2>
-                                    <div><span><strong>Name</strong></span></div>
-                                    <div><span>email@awebsite.com</span></div>
-                                    <div><span>www.awebsite.com</span></div>
-                                    <hr class="d-sm-none d-md-block d-lg-none">
-                                </div>
-                                <div class="col-sm-6 col-md-12 col-lg-6">
-                                    <h2 class="h4"><i class="fa fa-location-arrow"></i> Our Address</h2>
-                                    <div><span><strong>Office Name</strong></span></div>
-                                    <div><span>55 Icannot Dr</span></div>
-                                    <div><span>Daytone Beach, FL 85150</span></div>
-                                    <div><abbr data-toggle="tooltip" data-placement="top"
-                                               title="Office Phone: 555-867-5309">O:</abbr> 555-867-5309
-                                    </div>
-                                    <hr class="d-sm-none">
-                                </div>
+                                <hr class="d-sm-none">
                             </div>
                         </div>
                     </div>
-                </form>
-            </div>
+                </div>
+            </form>
         </div>
+        <!--<div class="modal fade" role="dialog" tabindex="-1" id="modal1">-->
+        <!--<div class="modal-dialog modal-lg" role="document">-->
+        <!--<div class="modal-content">-->
+        <!--<div class="modal-header">-->
+        <!--<h4 class="modal-title">Contact Information</h4>-->
+        <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span-->
+        <!--aria-hidden="true">×</span></button>-->
+        <!--</div>-->
+        <!--<div class="modal-body">-->
+        <!--<form action="javascript:void(0);" method="get" id="contactForm"><input class="form-control"-->
+        <!--type="hidden"-->
+        <!--name="Introduction"-->
+        <!--value="This email was sent from www.awebsite.com"><input-->
+        <!--class="form-control" type="hidden" name="subject"-->
+        <!--value="Awebsite.com Contact Form"><input class="form-control"-->
+        <!--type="hidden" name="to"-->
+        <!--value="email@awebsite.com">-->
+        <!--<div class="form-row">-->
+        <!--<div class="col-md-6">-->
+        <!--<div id="successfail"></div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="form-row">-->
+        <!--<div class="col-12 col-md-6" id="message">-->
+        <!--<h2 class="h4"><i class="fa fa-envelope"></i> Contact Us-->
+        <!--<small>-->
+        <!--<small class="required-input">&nbsp;(*required)</small>-->
+        <!--</small>-->
+        <!--</h2>-->
+        <!--<div class="form-group"><label for="from-name">Name</label><span-->
+        <!--class="required-input">*</span>-->
+        <!--<div class="input-group">-->
+        <!--<div class="input-group-prepend"><span class="input-group-text"><i-->
+        <!--class="fa fa-user-o"></i></span></div>-->
+        <!--<input class="form-control" type="text" name="name" required=""-->
+        <!--placeholder="Full Name" id="from-name"></div>-->
+        <!--</div>-->
+        <!--<div class="form-group"><label for="from-email">Email</label><span-->
+        <!--class="required-input">*</span>-->
+        <!--<div class="input-group">-->
+        <!--<div class="input-group-prepend"><span class="input-group-text"><i-->
+        <!--class="fa fa-envelope-o"></i></span></div>-->
+        <!--<input class="form-control" type="text" name="email" required=""-->
+        <!--placeholder="Email Address" id="from-email"></div>-->
+        <!--</div>-->
+        <!--<div class="form-row">-->
+        <!--<div class="col-12 col-sm-6 col-md-12 col-lg-6">-->
+        <!--<div class="form-group"><label for="from-phone">Phone</label><span-->
+        <!--class="required-input">*</span>-->
+        <!--<div class="input-group">-->
+        <!--<div class="input-group-prepend"><span class="input-group-text"><i-->
+        <!--class="fa fa-phone"></i></span></div>-->
+        <!--<input class="form-control" type="text" name="phone" required=""-->
+        <!--placeholder="Primary Phone" id="from-phone"></div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-12 col-sm-6 col-md-12 col-lg-6">-->
+        <!--<div class="form-group"><label for="from-calltime">Best Time to Call</label>-->
+        <!--<div class="input-group">-->
+        <!--<div class="input-group-prepend"><span class="input-group-text"><i-->
+        <!--class="fa fa-clock-o"></i></span></div>-->
+        <!--<select class="form-control" name="call time" id="from-calltime">-->
+        <!--<optgroup label="Best Time to Call">-->
+        <!--<option value="Morning" selected="">Morning</option>-->
+        <!--<option value="Afternoon">Afternoon</option>-->
+        <!--<option value="Evening">Evening</option>-->
+        <!--</optgroup>-->
+        <!--</select></div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="form-group"><label for="from-comments">Comments</label><textarea-->
+        <!--class="form-control" rows="5" name="comments" placeholder="Enter Comments"-->
+        <!--id="from-comments"></textarea></div>-->
+        <!--<div class="form-group">-->
+        <!--<div class="form-row">-->
+        <!--<div class="col">-->
+        <!--<button class="btn btn-primary btn-block" type="reset"><i-->
+        <!--class="fa fa-undo"></i> Reset-->
+        <!--</button>-->
+        <!--</div>-->
+        <!--<div class="col">-->
+        <!--<button class="btn btn-primary btn-block" type="submit">Submit <i-->
+        <!--class="fa fa-chevron-circle-right"></i></button>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<hr class="d-flex d-md-none">-->
+        <!--</div>-->
+        <!--<div class="col-12 col-md-6">-->
+        <!--<h2 class="h4"><i class="fa fa-location-arrow"></i> Locate Us</h2>-->
+        <!--<div class="form-row">-->
+        <!--<div class="col-12">-->
+        <!--<div class="static-map"><a-->
+        <!--href="https://www.google.com/maps/place/Daytona+International+Speedway/@29.1815062,-81.0744275,15z/data=!4m13!1m7!3m6!1s0x88e6d935da1cced3:0xa6b3e1bc0f2fc83a!2s1801+W+International+Speedway+Blvd,+Daytona+Beach,+FL+32114!3b1!8m2!3d29.187028!4d-81.0703076!3m4!1s0x88e6d949a4cb8593:0x1387c6c0b5c8cc97!8m2!3d29.1851681!4d-81.0705292"-->
+        <!--target="_blank" rel="noopener"> <img class="img-fluid"-->
+        <!--src="http://maps.googleapis.com/maps/api/staticmap?autoscale=2&amp;size=600x210&amp;maptype=roadmap&amp;format=png&amp;visual_refresh=true&amp;markers=size:mid%7Ccolor:0xff0000%7Clabel:%7C582+1801+W+International+Speedway+Blvd+Daytona+Beach+FL+32114&amp;zoom=12"-->
+        <!--alt="Google Map of Daytona International Speedway"></a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="col-sm-6 col-md-12 col-lg-6">-->
+        <!--<h2 class="h4"><i class="fa fa-user"></i> Our Info</h2>-->
+        <!--<div><span><strong>Name</strong></span></div>-->
+        <!--<div><span>email@awebsite.com</span></div>-->
+        <!--<div><span>www.awebsite.com</span></div>-->
+        <!--<hr class="d-sm-none d-md-block d-lg-none">-->
+        <!--</div>-->
+        <!--<div class="col-sm-6 col-md-12 col-lg-6">-->
+        <!--<h2 class="h4"><i class="fa fa-location-arrow"></i> Our Address</h2>-->
+        <!--<div><span><strong>Office Name</strong></span></div>-->
+        <!--<div><span>55 Icannot Dr</span></div>-->
+        <!--<div><span>Daytone Beach, FL 85150</span></div>-->
+        <!--<div><abbr data-toggle="tooltip" data-placement="top"-->
+        <!--title="Office Phone: 555-867-5309">O:</abbr> 555-867-5309-->
+        <!--</div>-->
+        <!--<hr class="d-sm-none">-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</form>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
     </div>
+
+
 </div>
-
-
 {% endblock %}
 
 {% block jsfiles %}
@@ -293,6 +222,7 @@
 <!--<script src="lib/owlcarousel/owl.carousel.min.js"></script>-->
 <!--<script src="lib/magnific-popup/magnific-popup.min.js"></script>-->
 <!--<script src="lib/sticky/sticky.js"></script>-->
+
 <script src="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/scripts/Contact-Form-v2-Modal--Full-with-Google-Map.js"></script>
 
 {% endblock %}
