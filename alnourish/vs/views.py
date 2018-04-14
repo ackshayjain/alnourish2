@@ -1,16 +1,47 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from .models import Contact
+from .forms import ContactForm
+
 
 # Create your views here.
 
 
 def index(request):
-	return render(request,'index.html')
+    return render(request, 'index.html')
+
 
 def about(request):
-	return render(request,'AboutUs.html')
+    return render(request, 'AboutUs.html')
+
 
 def contact(request):
-	return render(request,'ContactUs.html')
+
+    message=''
+    if request.method == 'POST':
+
+        form = ContactForm(request.POST)
+
+        if form.is_valid():
+            name = request.POST.get('name', '')
+            email = request.POST.get('email', '')
+            phone = request.POST.get('phone', '')
+            comments = request.POST.get('comments', '')
+            # culture_qs = Culture.objects.filter(username=username, name=name)
+
+            contact_obj = Contact(name=name, email=email, phone=phone, comments=comments)
+
+            contact_obj.save()
+            message = 'SUCCESSFULLY POSTED'
+            return redirect('home:contact')
+
+    else:
+        form = ContactForm()
+
+    context = {'form': form}
+
+    return render(request, 'contactus.html',context)
+
+
 
 # def login(request):
 # 	return render(request,'Login.html')
@@ -19,9 +50,4 @@ def contact(request):
 # 	return render(request,'Register.html')
 
 def team(request):
-	return render(request, 'team.html')
-
-
-	
-	
-	
+    return render(request, 'team.html')
