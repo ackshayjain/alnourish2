@@ -602,6 +602,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Services Section
 --------------------------------*/
 #services {
+      background: #fff; !important
   padding: 30px 0 0 0;
 }
 
@@ -676,6 +677,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Clients Section
 --------------------------------*/
 #clients {
+          background: #fff; !important
   padding: 30px 0;
 }
 
