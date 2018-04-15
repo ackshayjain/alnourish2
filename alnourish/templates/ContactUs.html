@@ -6,10 +6,15 @@
 <link rel="stylesheet"
       href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/css/Contact-Form-v2-Modal--Full-with-Google-Map.css">
 <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/css/styles.css">
+<link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/css/AboutUs.css">
+<link href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/css/animate.min.css" rel="stylesheet">
+<link href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/css/ionicons.min.css" rel="stylesheet">
+<link href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/css/owl.carousel.min.css" rel="stylesheet">
+<link href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/css/magnific-popup.css" rel="stylesheet">
 {% endblock %}
 
 {% block contact_active %}
-<li><a href="% url 'home:contact' %}" class="active"><i class="fas fa-bullhorn"></i> <span>Contact Us</span></a></li>
+<li><a href="{% url 'home:contact' %}" class="active"><i class="fas fa-bullhorn"></i> <span>Contact Us</span></a></li>
 {% endblock %}
 {% block main %}
 <!-- MAIN -->
@@ -18,8 +23,40 @@
 
     <div>
         <div class="container-fluid">
+<section id="contact" class="wow fadeInUp">
+      <div class="container">
+        <div class="section-header">
+          <h2>Get In Touch</h2>
+          <p>Do you use one of our kits? Or are you just interested in what we're doing? Reach out to us below</p>
+        </div>
+           <div class="row contact-info">
 
-            <h1>Contact Information</h1>
+          <div class="col-md-4">
+            <div class="contact-address">
+              <i class="fas fa-map-marker-alt"></i>
+              <h3>Address</h3>
+              <address>Netaji Subhas Institute of Technology<br> Dwarka Sector-3<br>New Delhi, India</address>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-phone">
+              <i class="fas fa-phone"></i>
+              <h3>Phone Number</h3>
+              <p><a href="tel:+919891468273">+91 9891468273</a></p>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="contact-email">
+              <i class="fas fa-envelope"></i>
+              <h3>Email</h3>
+              <p><a href="mailto:communication@alnourish.com">communication@alnourish.com</a></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
             <hr>
             <form action="" method="post" enctype="multipart/form-data">
                 <!--<div class="form-row">-->
@@ -61,22 +98,6 @@
                                                                              alt="Google Map Of New Delhi India"></a>
                                 </div>
                             </div>
-                            <div class="col-sm-6 col-md-12 col-lg-6">
-                                <h2 class="h4"><i class="fa fa-user"></i> Our Info</h2>
-                                <div><span><strong>Name</strong></span></div>
-                                <div><span>email@awebsite.com</span></div>
-                                <div><span>www.awebsite.com</span></div>
-                                <hr class="d-sm-none d-md-block d-lg-none">
-                            </div>
-                            <div class="col-sm-6 col-md-12 col-lg-6">
-                                <h2 class="h4"><i class="fa fa-location-arrow"></i> Our Address</h2>
-                                <div><span><strong>Office Name</strong></span></div>
-                                <div><span>55 Icannot Dr</span></div>
-                                <div><span>Daytone Beach, FL 85150</span></div>
-                                <div><abbr data-toggle="tooltip" data-placement="top"
-                                           title="Office Phone: 555-867-5309">O:</abbr> 555-867-5309
-                                </div>
-                                <hr class="d-sm-none">
                             </div>
                         </div>
                     </div>
@@ -216,13 +237,14 @@
 
 {% block jsfiles %}
 
-<!--<script src="lib/easing/easing.min.js"></script>-->
-<!--<script src="lib/superfish/hoverIntent.js"></script>-->
-<!--<script src="lib/superfish/superfish.min.js"></script>-->
-<!--<script src="lib/wow/wow.min.js"></script>-->
-<!--<script src="lib/owlcarousel/owl.carousel.min.js"></script>-->
-<!--<script src="lib/magnific-popup/magnific-popup.min.js"></script>-->
-<!--<script src="lib/sticky/sticky.js"></script>-->
+        <script src="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/scripts/easing.min.js"></script>
+        <script src="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/scripts/hoverIntent.js"></script>
+        <script src="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/scripts/superfish.min.js"></script>
+        <script src="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/scripts/wow.min.js"></script>
+        <script src="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/scripts/magnific-popup.min.js"></script>
+        <script src="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/scripts/sticky.js"></script>
+        <script src="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/scripts/about.js"></script>
+
 
 <script src="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/scripts/Contact-Form-v2-Modal--Full-with-Google-Map.js"></script>
 
