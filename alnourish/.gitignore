@@ -5,7 +5,6 @@ templates/contactbackup.html
 userprofile/migrations
 vs/migrations
 accounts/migrations
-static/
 
 
 .DS_Store
