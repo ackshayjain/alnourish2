@@ -7,26 +7,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <!-- VENDOR CSS -->
-    <!--<link rel="stylesheet" href="http://s3.amazonaws.com/alnourishbucket/assets/css/bootstrap.min.css"> &lt;!&ndash;AWS&ndash;&gt;-->
     <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/css/bootstrap.min.css">
-    <!--<link rel="stylesheet" href="assets/css/bootstrap.min.css">-->
-    <link rel="stylesheet"
-          href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/vendor/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet"
-          href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/vendor/linearicons/style.css">
-    <!--<link rel="stylesheet" href="{% static 'assets/vendor/chartist/css/chartist-custom.css' %}">-->
+
+    <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/vendor/linearicons/style.css">
     <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/css/collapzion.min.css">
-    <!-- MAIN CSS -->
     <link rel="stylesheet" href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/css/main.css">
 
-    <!-- GOOGLE FONTS -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
-    <!-- ICONS -->
-    <link rel="apple-touch-icon" sizes="76x76"
-          href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/img/apple-icon.png">
-    <link rel="icon" type="image/png" sizes="96x96"
-          href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/img/favicon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/img/favicon.png">
     <link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel='stylesheet prefetch' href='https://use.fontawesome.com/releases/v5.0.6/css/all.css'>
 
@@ -79,6 +69,7 @@
 .social ul.social_icons li.pin a:hover {
 	background-position: -132px -33px;
 }
+
     </style>
 </head>
 
@@ -163,10 +154,12 @@
                     <!--{% block register_active %}<li><a href="{% url 'account:register' %}" class=""><i class="lnr lnr-home"></i> <span>Register</span></a></li>{% endblock %}-->
                     <!--{% endif %}-->
                     {% block impact_active %}
-                    <li><a href="{% url 'home:impact' %}" class=""><i class="fas fa-globe"></i> <span>Our Impact</span></a></li>
+                    <li><a href="{% url 'home:impact' %}" class=""><i class="fas fa-globe"></i> <span>Our Impact</span></a>
+                    </li>
                     {% endblock %}
                     {% block blog_active %}
-                    <li><a target="_blank" href="http://labs.tffchallenge.com/team/2018/2222-alnourish/" class=""><i class="fas fa-edit"></i> <span>Blog</span></a></li>
+                    <li><a target="_blank" href="http://labs.tffchallenge.com/team/2018/2222-alnourish/" class=""><i
+                            class="fas fa-edit"></i> <span>Blog</span></a></li>
                     {% endblock %}
                 </ul>
             </nav>
@@ -176,16 +169,16 @@
     <!-- MAIN -->
     {% block main %}
     {% endblock %}
-  
-	<div class="social">
-            <ul class="social_icons text-center">
-              <li class="facebook"><a target="_blank" href="https://www.facebook.com/alnourish">facebook</a></li>
-              <li class="twitter"><a target="_blank" href="https://www.twitter.com/alnourish">twitter</a></li>
-             <li class="insta"><a target="_blank" href="https://www.instagram.com/alnourishofficial/">insta</a></li>
-             <li class="youtube"><a href="#">youtube</a></li>
-            
-         </ul>
-     </div>
+
+    <div class="social">
+        <ul class="social_icons text-center">
+            <li class="facebook"><a target="_blank" href="https://www.facebook.com/alnourish">facebook</a></li>
+            <li class="twitter"><a target="_blank" href="https://www.twitter.com/alnourish">twitter</a></li>
+            <li class="insta"><a target="_blank" href="https://www.instagram.com/alnourishofficial/">insta</a></li>
+            <li class="youtube"><a href="#">youtube</a></li>
+
+        </ul>
+    </div>
 
 </div>
 
@@ -208,8 +201,7 @@
   		$(this).tab('show')
 		}
 	)
-{% block js %}
-{% endblock %}
+
 
 
 
