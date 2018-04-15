@@ -10,6 +10,7 @@ class Culture(models.Model):
     username = models.CharField(max_length=20)
     name = models.CharField(max_length=20)
     volume = models.IntegerField()
+    reg_number = models.BigIntegerField(default=0)
 
     test_date = models.CharField(max_length = 200,default='')
     ph_test = models.CharField(max_length=200,default='')
