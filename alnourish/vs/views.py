@@ -24,17 +24,17 @@ def contact(request):
 
         form = ContactForm(request.POST)
 
-        # if form.is_valid():
-        #     name = request.POST.get('name', '')
-        #     email = request.POST.get('email', '')
-        #     phone = request.POST.get('phone', '')
-        #     comments = request.POST.get('comments', '')
-        #     # culture_qs = Culture.objects.filter(username=username, name=name)
-        #
-        #     contact_obj = Contact(name=name, email=email, phone=phone, comments=comments)
-        #
-        #     contact_obj.save()
-        #     message = 'SUCCESSFULLY POSTED'
+        if form.is_valid():
+            name = request.POST.get('name', '')
+            email = request.POST.get('email', '')
+            phone = request.POST.get('phone', '')
+            comments = request.POST.get('comments', '')
+            # culture_qs = Culture.objects.filter(username=username, name=name)
+
+            contact_obj = Contact(name=name, email=email, phone=phone, comments=comments)
+
+            contact_obj.save()
+            message = 'SUCCESSFULLY POSTED'
         return redirect('home:contact')
 
     else:
