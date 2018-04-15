@@ -1,5 +1,5 @@
-from django.shortcuts import render,redirect
-# from .models import Contact
+from django.shortcuts import render, redirect
+from .models import Contact
 from .forms import ContactForm
 
 
@@ -13,13 +13,13 @@ def index(request):
 def about(request):
     return render(request, 'AboutUs.html')
 
+
 def impact(request):
     return render(request, 'OurImpact.html')
 
 
 def contact(request):
-
-    message=''
+    message = ''
     if request.method == 'POST':
 
         form = ContactForm(request.POST)
@@ -34,16 +34,16 @@ def contact(request):
             contact_obj = Contact(name=name, email=email, phone=phone, comments=comments)
 
             contact_obj.save()
-            message = 'SUCCESSFULLY POSTED'
-        return redirect('home:contact')
+            message = 'SUCCESFULLY POSTED'
+            context = {'form': form, 'message': message}
+        return render(request, "ContactUs.html", context)
 
     else:
         form = ContactForm()
 
     context = {'form': form}
 
-    return render(request, 'ContactUs.html',context)
-
+    return render(request, 'ContactUs.html', context)
 
 
 # def login(request):
