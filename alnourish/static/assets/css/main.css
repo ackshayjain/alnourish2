@@ -477,7 +477,7 @@ html.fullscreen-bg #wrapper {
 
 @media screen and (min-width: 768px) {
   .navbar-nav.navbar-right {
-    margin-right: 0; } }
+    margin-right: 10; } }
 
 @media screen and (max-width: 767px) {
   .navbar-nav {
@@ -485,14 +485,13 @@ html.fullscreen-bg #wrapper {
     margin: 0; }
     .navbar-nav > li {
       display: table-cell;
-      width: 1%;
+      width: 10%;
       position: inherit;
       text-align: center; }
     .navbar-nav > li > a {
       padding: 15px 20px; }
       .navbar-nav > li > a span:not(.badge),
-      .navbar-nav > li > a .icon-submenu {
-        display: none; }
+      .navbar-nav > li > a .icon-submenu { }
     .navbar-nav .open .dropdown-menu {
       -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
       -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
@@ -1422,12 +1421,12 @@ ul.activity-list > li {
         height: 100%;
         background-color: #33bbff; }
       .profile-header .profile-stat .stat-item:last-child:after {
-        display: none; }
+        }
     .profile-header .profile-stat .stat-item span {
       display: block; }
   @media screen and (max-width: 1023px) {
     .profile-header .profile-stat .stat-item:after {
-      display: none; } }
+  } }
 
 .profile-detail {
   padding-bottom: 30px; }

@@ -161,6 +161,19 @@
                     <li><a target="_blank" href="http://labs.tffchallenge.com/team/2018/2222-alnourish/" class=""><i
                             class="fas fa-edit"></i> <span>Blog</span></a></li>
                     {% endblock %}
+                    <li>
+							<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="fa fa-home"></i> <span>Home</span> <i class="icon-submenu fas fa-chevron-left"></i></a>
+							<div id="subPages" class="collapse ">
+								<ul class="nav">
+									<li><a href="{% url 'home:index' %}" class=""><i class="fas fa-th-large"></i>Main</a></li>
+									<li><a href="" class=""><i class="fas fa-sun"></i>Grow</a></li>
+									<li><a href="" class=""><i class="fas fa-utensils"></i>Eat</a></li>
+                                    <li><a href="" class=""><i class="fas fa-sync"></i>Sell</a></li>
+                                    <li><a href="" class=""><i class="fab fa-delicious"></i>Buy</a></li>
+
+								</ul>
+							</div>
+						</li>
                 </ul>
             </nav>
         </div>
