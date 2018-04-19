@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 {% load static from staticfiles %}
-{% block home_active %}
-<a href="{% url 'home:index' %}" class="active"><i class="fa fa-home"></i> <span>Home</span></a>
-{% endblock %}
 
+{% block home_active %}
+                                <li><a href="{% url 'home:index' %}" class="active"><i class="fas fa-th-large"></i>Main</a>
+                                </li>
+{% endblock %}
 {% block main %}
 
 
@@ -27,7 +28,7 @@
 
                         <li class="one-half animate-box" data-animate-effect="fadeIn"
                             style="background-image: url(https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/img/2.jpg); ">
-                            <a href="./Literary.html" class="color-2">
+                            <a href="{% url 'home:eat' %}" class="color-2">
                                 <div class="case-studies-summary">
                                     <h2></h2>
                                 </div>
@@ -36,7 +37,7 @@
 
                         <li class="one-half animate-box" data-animate-effect="fadeIn"
                             style="background-image: url(https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/img/3.jpg); ">
-                            <a href="{% url 'profile:index' %}" class="color-3">
+                            <a href="" class="color-3">
                                 <div class="case-studies-summary">
                                     <h2></h2>
                                 </div>
@@ -46,7 +47,7 @@
                         <li class="one-half animate-box" data-animate-effect="fadeIn"
                             style="background-image: url(https://s3.ap-south-1.amazonaws.com/alnourishbucket/assets/img/4.jpg); ">
 
-                            <a href="./Literary.html" class="color-4">
+                            <a href="" class="color-4">
                                 <div class="case-studies-summary">
                                     <h2></h2>
                                 </div>

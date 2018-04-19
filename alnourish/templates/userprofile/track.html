@@ -125,9 +125,7 @@ a.float:hover + div.label-container{
 </style>
 {% endblock %}
 
-{% block home_active %}
-<li><a href="{% url 'home:index' %}" class="active"><i class="fa fa-home"></i> <span>Home</span></a></li>
-{% endblock %}
+                                {% block grow_active %}<li><a href="{% url 'profile:index' %}" class="active"><i class="fas fa-sun"></i>Grow</a></li>{% endblock %}
 
 {% block main %}
 

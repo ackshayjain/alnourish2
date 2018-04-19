@@ -54,3 +54,6 @@ def contact(request):
 
 def team(request):
     return render(request, 'team.html')
+
+def eat(request):
+    return render(request, 'eat.html')
