@@ -5,7 +5,7 @@ class Kits(models.Model):
     id = models.AutoField(primary_key=True)
     reg_number = models.BigIntegerField()
 
-    is_registered = models.BooleanField(default=0)
+    is_registered = models.BooleanField(default=False)
 
     date_published = models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)

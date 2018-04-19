@@ -133,9 +133,13 @@
         <div class="sidebar-scroll">
             <nav>
                 <ul class="nav">
-                    {% block home_active %}
-                    <li><a href="{% url 'home:index' %}"><i class="fa fa-home"></i> <span>Home</span></a></li>
-                    {% endblock %}
+
+                    <li>
+                        {% block home_active %}<a href="{% url 'home:index' %}"><i class="fa fa-home"></i> <span>Home</span></a>{% endblock %}
+                        <ul>
+                            <li><a href="{% url 'profile:index' %}"><i class="fa fa-home"></i> <span>GROW</span></a></li>
+                        </ul>
+                    </li>
                     {% block about_active %}
                     <li><a href="{% url 'home:about' %}" class=""><i class="fas fa-comments"></i> <span>About Us</span></a>
                     </li>
@@ -171,6 +175,7 @@
     {% endblock %}
 
     <div class="social">
+
         <ul class="social_icons text-center">
             <li class="facebook"><a target="_blank" href="https://www.facebook.com/alnourish">facebook</a></li>
             <li class="twitter"><a target="_blank" href="https://www.twitter.com/alnourish">twitter</a></li>
@@ -178,6 +183,7 @@
             <li class="youtube"><a href="#">youtube</a></li>
 
         </ul>
+        <!--<small>Developed and Maintained by : Ackshay Jain and Devansh Jain</small>-->
     </div>
 
 </div>

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static from staticfiles %}
 {% block home_active %}
-<li><a href="{% url 'home:index' %}" class="active"><i class="fa fa-home"></i> <span>Home</span></a></li>
+<a href="{% url 'home:index' %}" class="active"><i class="fa fa-home"></i> <span>Home</span></a>
 {% endblock %}
 
 {% block main %}

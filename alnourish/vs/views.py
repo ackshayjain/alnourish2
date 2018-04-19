@@ -36,7 +36,7 @@ def contact(request):
             contact_obj.save()
             message = 'SUCCESFULLY POSTED'
             context = {'form': form, 'message': message}
-        return render(request, "ContactUs.html", context)
+            return render(request, "ContactUs.html", context)
 
     else:
         form = ContactForm()
