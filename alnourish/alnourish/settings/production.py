@@ -25,7 +25,7 @@ SECRET_KEY = 'lht702d_-8wvb2f*ai6cy3i#j0ks1t9%#wzvb%koxuu#^b-m&u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.herokuapp.com', 'www.alnourish.com/']
+ALLOWED_HOSTS = ['.herokuapp.com', 'alnourish.com']
 
 # Application definition
 
