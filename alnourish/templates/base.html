@@ -151,7 +151,7 @@
                         <div id="subPage" class="collapse active">
                             <ul class="nav">
                                 <li><a href="{% url 'account:login' %}" class=""><i
-                                        class="fas fa-user-plus"></i>Login</a>
+                                        class="fas fa-sign-in-alt"></i>Login</a>
                                 </li>
                                 <li><a href="{% url 'account:register' %}" class=""><i class="fas fa-user-plus"></i>Register</a>
                                 </li>
@@ -221,10 +221,10 @@
                     <li><a href="{% url 'home:impact' %}" class=""><i class="fas fa-globe"></i> <span>Our Impact</span></a>
                     </li>
                     {% endblock %}
-                    <!--{% block blog_active %}-->
-                    <!--<li><a target="_blank" href="http://labs.tffchallenge.com/team/2018/2222-alnourish/" class=""><i-->
-                    <!--class="fas fa-edit"></i> <span>Blog</span></a></li>-->
-                    <!--{% endblock %}-->
+                    {% block blog_active %}
+                    <li><a target="_blank" href="http://labs.tffchallenge.com/team/2018/2222-alnourish/" class="">
+                    <i class="fas fa-edit"></i> <span>Blog</span></a></li>
+                    {% endblock %}
 
                 </ul>
             </nav>
