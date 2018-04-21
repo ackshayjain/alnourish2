@@ -106,6 +106,10 @@
                    target="_blank"><i class="fa fa-rocket"></i> <span>Register</span></a>
                 {% endif %}
             </div>
+            </div>
+            </nav>
+
+
             <!--<div id="navbar-menu">-->
 
                 <!--<ul class="nav navbar-nav navbar-right">-->
@@ -134,8 +138,6 @@
                 <!--</ul>-->
 
             <!--</div>-->
-        </div>
-    </nav>
     <!-- END NAVBAR -->
     <!-- LEFT SIDEBAR -->
     <div id="sidebar-nav" class="sidebar">
@@ -208,11 +210,7 @@
                     <li><a href="{% url 'home:team' %}" class=""><i class="fas fa-users"></i> <span>Our Team</span></a>
                     </li>
                     {% endblock %}
-                    {% block contact_active %}
-                    <li><a href="{% url 'home:contact' %}" class=""><i
-                            class="fas fa-bullhorn"></i><span>Contact Us</span></a>
-                    </li>
-                    {% endblock %}
+                    
                     <!--{% if not request.user.is_authenticated %}-->
                     <!--{% block login_active %}<li><a href="{% url 'account:login' %}" class=""><i class="lnr lnr-home"></i> <span>Login</span></a></li>{% endblock %}-->
                     <!--{% block register_active %}<li><a href="{% url 'account:register' %}" class=""><i class="lnr lnr-home"></i> <span>Register</span></a></li>{% endblock %}-->
@@ -224,6 +222,11 @@
                     {% block blog_active %}
                     <li><a target="_blank" href="http://labs.tffchallenge.com/team/2018/2222-alnourish/" class="">
                     <i class="fas fa-edit"></i> <span>Blog</span></a></li>
+                    {% endblock %}
+                    {% block contact_active %}
+                    <li><a href="{% url 'home:contact' %}" class=""><i
+                            class="fas fa-bullhorn"></i><span>Contact Us</span></a>
+                    </li>
                     {% endblock %}
 
                 </ul>
