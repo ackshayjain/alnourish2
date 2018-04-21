@@ -76,6 +76,9 @@
 
 
 
+
+
+
     </style>
 </head>
 
@@ -103,34 +106,34 @@
                    target="_blank"><i class="fa fa-rocket"></i> <span>Register</span></a>
                 {% endif %}
             </div>
-            <div id="navbar-menu">
+            <!--<div id="navbar-menu">-->
 
-                <ul class="nav navbar-nav navbar-right">
+                <!--<ul class="nav navbar-nav navbar-right">-->
 
 
-                    {% if request.user.is_authenticated %}
-                    <li class="dropdown">
+                    <!--{% if request.user.is_authenticated %}-->
+                    <!--<li class="dropdown">-->
 
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <!--<img src="{% static 'assets/img/user.png' %}" class="img-circle" alt="Avatar"> -->
-                            <span>{{request.user.username}}</span>
-                            <i class="icon-submenu fa fa-bars"></i>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <!--<li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>-->
-                            <!--<li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>-->
-                            <!--<li><a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li>-->
-                            <li><a href="{% url 'account:logout' %}"><i class="fa fa-close"></i>
-                                <span>Logout</span></a></li>
-                        </ul>
-                    </li>
-                    {% endif %}
-                    <!-- <li>
-                        <a class="update-pro" href="https://www.themeineed.com/downloads/klorofil-pro-bootstrap-admin-dashboard-template/?utm_source=klorofil&utm_medium=template&utm_campaign=KlorofilPro" title="Upgrade to Pro" target="_blank"><i class="fa fa-rocket"></i> <span>UPGRADE TO PRO</span></a>
-                    </li> -->
-                </ul>
+                        <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
+                            <!--&lt;!&ndash;<img src="{% static 'assets/img/user.png' %}" class="img-circle" alt="Avatar"> &ndash;&gt;-->
+                            <!--<span>{{request.user.username}}</span>-->
+                            <!--<i class="icon-submenu fa fa-bars"></i>-->
+                        <!--</a>-->
+                        <!--<ul class="dropdown-menu">-->
+                            <!--&lt;!&ndash;<li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<li><a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li>&ndash;&gt;-->
+                            <!--<li><a href="{% url 'account:logout' %}"><i class="fa fa-close"></i>-->
+                                <!--<span>Logout</span></a></li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                    <!--{% endif %}-->
+                    <!--&lt;!&ndash; <li>-->
+                        <!--<a class="update-pro" href="https://www.themeineed.com/downloads/klorofil-pro-bootstrap-admin-dashboard-template/?utm_source=klorofil&utm_medium=template&utm_campaign=KlorofilPro" title="Upgrade to Pro" target="_blank"><i class="fa fa-rocket"></i> <span>UPGRADE TO PRO</span></a>-->
+                    <!--</li> &ndash;&gt;-->
+                <!--</ul>-->
 
-            </div>
+            <!--</div>-->
         </div>
     </nav>
     <!-- END NAVBAR -->
@@ -141,22 +144,37 @@
                 <ul class="nav">
 
                     <li>
-                        <a href="#subPage" data-toggle="collapse" class="collapsed"><i class="fas fa-user-circle"></i> <span>Hi {Guest/username}</span>
+                        <a href="#subPage" data-toggle="collapse" class="collapsed"><i class="fas fa-user-circle"></i>
+                            {% if not request.user.is_authenticated %}
+                            <span>Hi, Guest!</span>
                             <i class="icon-submenu fas fa-chevron-left"></i></a>
                         <div id="subPage" class="collapse active">
                             <ul class="nav">
-                                <li><a href="{% url 'home:index' %}" class=""><i class="fas fa-user-plus"></i>{Login/Register}</a>
+                                <li><a href="{% url 'account:login' %}" class=""><i
+                                        class="fas fa-user-plus"></i>Login</a>
                                 </li>
-                                <li><a href="{% url 'home:index' %}" class=""><i class="fas fa-user-times"></i>{Logout}</a>
+                                <li><a href="{% url 'account:register' %}" class=""><i class="fas fa-user-plus"></i>Register</a>
                                 </li>
 
                             </ul>
                         </div>
+                        {% else %}
+                        <span>Hi, {{request.user.username}}</span>
+                        <i class="icon-submenu fas fa-chevron-left"></i></a>
+                        <div id="subPage" class="collapse active">
+                            <ul class="nav">
+                                <li><a href="{% url 'account:logout' %}" class=""><i
+                                        class="fas fa-user-times"></i>Logout</a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                        {% endif %}
                     </li>
                     <br>
-                    
-                    
-                    
+
+
                     <li>
                         <a href="#subPages" data-toggle="collapse" class="collapsed"><i class="fa fa-home"></i> <span>Home</span>
                             <i class="icon-submenu fas fa-chevron-left"></i></a>
@@ -205,7 +223,7 @@
                     {% endblock %}
                     <!--{% block blog_active %}-->
                     <!--<li><a target="_blank" href="http://labs.tffchallenge.com/team/2018/2222-alnourish/" class=""><i-->
-                            <!--class="fas fa-edit"></i> <span>Blog</span></a></li>-->
+                    <!--class="fas fa-edit"></i> <span>Blog</span></a></li>-->
                     <!--{% endblock %}-->
 
                 </ul>
@@ -250,6 +268,9 @@
   		$(this).tab('show')
 		}
 	)
+
+
+
 
 
 
