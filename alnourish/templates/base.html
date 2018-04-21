@@ -141,6 +141,23 @@
                 <ul class="nav">
 
                     <li>
+                        <a href="#subPage" data-toggle="collapse" class="collapsed"><i class="fas fa-user-circle"></i> <span>Hi {Guest/username}</span>
+                            <i class="icon-submenu fas fa-chevron-left"></i></a>
+                        <div id="subPage" class="collapse active">
+                            <ul class="nav">
+                                <li><a href="{% url 'home:index' %}" class=""><i class="fas fa-user-plus"></i>{Login/Register}</a>
+                                </li>
+                                <li><a href="{% url 'home:index' %}" class=""><i class="fas fa-user-times"></i>{Logout}</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </li>
+                    <br>
+                    
+                    
+                    
+                    <li>
                         <a href="#subPages" data-toggle="collapse" class="collapsed"><i class="fa fa-home"></i> <span>Home</span>
                             <i class="icon-submenu fas fa-chevron-left"></i></a>
                         <div id="subPages" class="collapse active">
