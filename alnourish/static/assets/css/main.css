@@ -117,13 +117,13 @@ body{
   background: rgba(37, 190, 213, 0);
 }
 #gtco-portfolio-list li a.color-3:before {
-  background: rgba(255, 77, 77, 0.2);
+  background: rgba(255, 77, 77, 0.5);
 }
 #gtco-portfolio-list li a.color-3:hover:before {
   background: rgba(239, 172, 147, 0);
 }
 #gtco-portfolio-list li a.color-4:before {
-  background:rgba(51, 102, 255, 0.2);
+  background:rgba(51, 102, 255, 0.5);
 }
 #gtco-portfolio-list li a.color-4:hover:before {
   background: rgba(249, 17, 40, 0);
