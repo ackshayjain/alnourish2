@@ -6,6 +6,8 @@ userprofile/migrations
 vs/migrations
 kits/migrations
 accounts/migrations
+static/assets
+
 
 .DS_Store
 .py[cod]
